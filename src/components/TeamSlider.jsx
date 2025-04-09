@@ -55,7 +55,7 @@ function TeamSlider() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105">
               <div className="rounded-md p-6 text-md w-full sm:text-5xl ">
                 <p className=" text-gray-600 text-sm italic mt-2">
-                  "{card.frase}"
+                  "{card.frase_motivacional}"
                 </p>
 
                 <div className="flex mt-8 items-start">
@@ -69,8 +69,8 @@ function TeamSlider() {
                       {card.nome}
                     </h6>
 
-                    <p className=" text-gray-600 text-sm italic">
-                      "{card.cargo}"
+                    <p className=" text-gray-600 text-sm">
+                      {card.cargo}
                     </p>
                   </div>
                 </div>

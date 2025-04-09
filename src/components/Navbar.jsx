@@ -2,14 +2,18 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import React from "react";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const location = useLocation(); // Hook para obter a URL atual
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
+
+  // Função para verificar se o link é o ativo
+  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="sticky top-0 bg-white shadow-md z-10 py-3 backdrop-blur-lg border-b border-neutral-200">
@@ -25,27 +29,52 @@ const Navbar = () => {
           {/* MENU DESKTOP */}
           <ul className="hidden lg:flex ml-14 space-x-12">
             <li>
-              <Link to="/" className="hover:text-blue-500">
+              <Link
+                to="/"
+                className={`${
+                  isActive("/") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                } hover:text-blue-500`}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/sobre" className="hover:text-blue-500">
+              <Link
+                to="/sobre"
+                className={`${
+                  isActive("/sobre") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                } hover:text-blue-500`}
+              >
                 Sobre Nós
               </Link>
             </li>
             <li>
-              <Link to="/projetos" className="hover:text-blue-500">
+              <Link
+                to="/projetos"
+                className={`${
+                  isActive("/projetos") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                } hover:text-blue-500`}
+              >
                 Projetos
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="hover:text-blue-500">
+              <Link
+                to="/blog"
+                className={`${
+                  isActive("/blog") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                } hover:text-blue-500`}
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/galeria" className="hover:text-blue-500">
+              <Link
+                to="/galeria"
+                className={`${
+                  isActive("/galeria") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                } hover:text-blue-500`}
+              >
                 Galeria
               </Link>
             </li>
@@ -77,7 +106,9 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="hover:text-blue-500"
+                  className={`${
+                    isActive("/") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                  } hover:text-blue-500`}
                   onClick={toggleNavbar}
                 >
                   Home
@@ -86,7 +117,9 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/sobre"
-                  className="hover:text-blue-500"
+                  className={`${
+                    isActive("/sobre") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                  } hover:text-blue-500`}
                   onClick={toggleNavbar}
                 >
                   Sobre Nós
@@ -95,7 +128,9 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/projetos"
-                  className="hover:text-blue-500"
+                  className={`${
+                    isActive("/projetos") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                  } hover:text-blue-500`}
                   onClick={toggleNavbar}
                 >
                   Projetos
@@ -104,7 +139,9 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/blog"
-                  className="hover:text-blue-500"
+                  className={`${
+                    isActive("/blog") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                  } hover:text-blue-500`}
                   onClick={toggleNavbar}
                 >
                   Blog
@@ -113,7 +150,9 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/galeria"
-                  className="hover:text-blue-500"
+                  className={`${
+                    isActive("/galeria") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
+                  } hover:text-blue-500`}
                   onClick={toggleNavbar}
                 >
                   Galeria
@@ -123,7 +162,7 @@ const Navbar = () => {
                 <a
                   href="#"
                   style={{ backgroundColor: "#E28743" }}
-                  className=" py-3 px-6 rounded-md text-white font-semibold"
+                  className="py-3 px-6 rounded-md text-white font-semibold"
                 >
                   Apoie a causa
                 </a>
