@@ -5,14 +5,25 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import testimonialData from "../data/testimonialData";
+import { motion } from "framer-motion";
 
 function TestimonialSlider() {
   return (
     <div className="p-4">
       <div className="text-center mb-10">
-        <h2 className="text-2xl md:text-3xl font-medium text-blue-950">
-         Assista <span className="text-orange-500">testemunho</span> de jovens que aceitarama a ajuda da <span className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text font-bold ">Kutchindja</span>.
-        </h2> 
+        <motion.h2
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 2.5 }}
+          className="text-2xl md:text-3xl font-medium text-blue-950"
+        >
+          Assista <span className="text-orange-500">testemunho</span> de jovens
+          que aceitarama a ajuda da{" "}
+          <span className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text font-bold ">
+            Kutchindja
+          </span>
+          .
+        </motion.h2>
       </div>
       <Swiper
         modules={[Navigation, Pagination]}

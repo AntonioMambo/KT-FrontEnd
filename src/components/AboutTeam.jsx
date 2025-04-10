@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import React, { useRef } from "react";
 import teamData from "../data/teamData";
+import { motion } from "framer-motion";
 
 function AboutTeam() {
   const swiperRef = useRef(null);
@@ -20,11 +21,16 @@ function AboutTeam() {
 
   return (
     <div className="mt-10 tracking-wide relative">
-      <div className="text-center mb-10">
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 2 }}
+        className="text-center mb-10"
+      >
         <h2 className="text-2xl md:text-3xl font-bold text-blue-950">
           Nossa Equipe Técnica
         </h2>
-      </div>
+      </motion.div>
 
       <Swiper
         ref={swiperRef}

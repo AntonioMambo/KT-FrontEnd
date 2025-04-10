@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import React, { useRef } from "react";
 import teamData from "../data/teamData";
+import { motion } from "framer-motion";
 
 function TeamSlider() {
   // Referência para a instância do Swiper
@@ -23,10 +24,15 @@ function TeamSlider() {
   return (
     <div className="mt-10 tracking-wide relative">
       <div className="text-center mb-10">
-        <h2 className="text-2xl md:text-3xl font-medium text-blue-950">
+        <motion.h2
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 2.5 }}
+          className="text-2xl md:text-3xl font-medium text-blue-950"
+        >
           <span className="text-orange-500">Frases motivacionais</span> de
           profissionais que se aliaram à causa que defendemos.
-        </h2>
+        </motion.h2>
       </div>
 
       <Swiper
@@ -69,9 +75,7 @@ function TeamSlider() {
                       {card.nome}
                     </h6>
 
-                    <p className=" text-gray-600 text-sm">
-                      {card.cargo}
-                    </p>
+                    <p className=" text-gray-600 text-sm">{card.cargo}</p>
                   </div>
                 </div>
               </div>
