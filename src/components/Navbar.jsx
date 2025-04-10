@@ -48,7 +48,7 @@ const Navbar = () => {
                 Sobre Nós
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/projetos"
                 className={`${
@@ -57,7 +57,7 @@ const Navbar = () => {
               >
                 Projetos
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="/blog"
@@ -126,7 +126,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   to="/projetos"
                   className={`${
                     isActive("/projetos") ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-blue-950"
@@ -134,7 +134,7 @@ const Navbar = () => {
                   onClick={toggleNavbar}
                 >
                   Projetos
-                </Link>
+                </Link> */}
               </li>
               <li>
                 <Link

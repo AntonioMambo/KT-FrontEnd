@@ -32,9 +32,9 @@ function Footer() {
             <li>
               <Link to="/sobre" className="hover:text-blue-500">Sobre Nós</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/projetos" className="hover:text-blue-500">Projetos</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/blog" className="hover:text-blue-500">Blog</Link>
             </li>

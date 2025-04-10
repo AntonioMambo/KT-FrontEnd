@@ -55,11 +55,11 @@ function AboutTeam() {
                 {member.nome}
               </h6>
               <p className="text-sm text-gray-600">{member.cargo}</p>
-              <p className="text-gray-600 italic text-sm mt-2 text-center">
+              <p className="text-gray-600 italic text-xs mt-2 text-center">
                 "{member.frase_motivacional}"
               </p>
               {member.biografia && (
-                <p className="text-xs text-gray-500 mt-4 text-justify">
+                <p className="text-sm text-gray-500 mt-4 text-justify">
                   {member.biografia}
                 </p>
               )}
