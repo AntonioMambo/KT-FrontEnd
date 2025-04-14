@@ -1,9 +1,9 @@
-import user1 from "../assets/images/user1.jpg";
-import user2 from "../assets/images/user2.jpg";
-import user3 from "../assets/images/user3.jpg";
-import user4 from "../assets/images/user4.jpg";
-import user5 from "../assets/images/user5.jpg";
-import user6 from "../assets/images/user5.jpg";
+import user1 from "/images/user1.jpg";
+import user2 from "/images/user2.jpg";
+import user3 from "/images/user3.jpg";
+import user4 from "/images/user4.jpg";
+import user5 from "/images/user5.jpg";
+import user6 from "/images/user5.jpg";
 
 const teamData = [
   {
