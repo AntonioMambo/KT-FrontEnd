@@ -31,7 +31,7 @@ function ProjectSlider() {
                 <motion.img
                   src={projeto.ImageProjeto}
                   alt={projeto.NomeProjeto}
-                  className="w-full h-full object-cover brightness-30"
+                  className="w-full h-full object-cover"
                   initial={{ y: 0 }}
                   whileInView={{
                     y: [-20, 20],
