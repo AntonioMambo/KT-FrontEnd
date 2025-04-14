@@ -1,10 +1,10 @@
-import img1 from "../assets/images/Projetos/+porNos.jpg";
-import img2 from "../assets/images/Projetos/conhecerPoder.jpg";
-import img3 from "../assets/images/Projetos/EmpreenderOrgulho.jpg";
-import img4 from "../assets/images/Projetos/freeme.jpg"; // corrigido
-import img5 from "../assets/images/Projetos/HandsOff.jpg";
-import img6 from "../assets/images/Projetos/VisaoMais.jpg";
-import img7 from "../assets/images/Projetos/WBA.jpg";
+import img1 from "/images/Projetos/+pornos.jpg";
+import img2 from "/images/Projetos/conhecerpoder.jpg";
+import img3 from "/images/Projetos/empreenderorgulho.jpg";
+import img4 from "/images/Projetos/freeme.jpg"; // corrigido
+import img5 from "/images/Projetos/handsoff.jpg";
+import img6 from "/images/Projetos/visaomais.jpg";
+import img7 from "/images/Projetos/wba.jpg";
 
 export const projetos = [
   { 

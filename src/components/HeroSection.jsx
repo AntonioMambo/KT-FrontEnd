@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import img1 from "../assets/images/img1.jpg";
-import user1 from "../assets/images/user1.jpg";
-import user2 from "../assets/images/user2.jpg";
-import user3 from "../assets/images/user3.jpg";
-import user4 from "../assets/images/user4.jpg";
-import user5 from "../assets/images/user5.jpg";
+import user1 from "/images/User1.jpg";
+import user2 from "/images/User2.jpg";
+import user3 from "/images/User3.jpg";
+import user4 from "/images/User4.jpg";
+import user5 from "/images/User5.jpg";
 
 function HeroSection() {
   return (
