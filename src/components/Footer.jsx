@@ -51,7 +51,7 @@ function Footer() {
             </li> */}
             <li>
               <Link to="/blog" className="hover:text-blue-500">
-                Blog
+                Projetos
               </Link>
             </li>
             <li>

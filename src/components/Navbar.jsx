@@ -48,7 +48,7 @@ const Navbar = () => {
                 Sobre Nós
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link
                 to="/projetos"
                 className={`${
@@ -57,8 +57,8 @@ const Navbar = () => {
               >
                 Projetos
               </Link>
-            </li> */}
-            <li>
+            </li>
+            {/* <li>
               <Link
                 to="/blog"
                 className={`${
@@ -67,7 +67,7 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="/galeria"
