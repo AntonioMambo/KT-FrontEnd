@@ -5,6 +5,7 @@ import Sobre from './pages/Sobre';
 import Projetos from './pages/Projetos';
 import Blog from './pages/Blog';  
 import Galeria from './pages/Galeria'
+import Detalhes from './pages/Detalhes';
 import './App.css'
 
 
@@ -17,6 +18,8 @@ function App() {
         <Route path="/projetos" element={<Projetos />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/galeria" element={<Galeria />} />
+        <Route path="/projeto/:id" element={<Detalhes />} />
+
       </Routes>
   
   );

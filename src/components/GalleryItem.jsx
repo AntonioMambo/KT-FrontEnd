@@ -10,12 +10,12 @@ export default function Gallery() {
   const [likes, setLikes] = useState({});
 
   // Função para alternar like de uma imagem específica
-  const toggleLike = (index) => {
-    setLikes((prevLikes) => ({
-      ...prevLikes,
-      [index]: !prevLikes[index],
-    }));
-  };
+    const toggleLike = (index) => {
+      setLikes((prevLikes) => ({
+        ...prevLikes,
+        [index]: !prevLikes[index],
+      }));
+    };
 
   return (
     <div className="columns-2 sm:columns-3 md:columns-4 gap-4 p-4">
@@ -32,7 +32,7 @@ export default function Gallery() {
 
           <motion.button
             onClick={() => toggleLike(index)}
-            whileTap={{ scale: 0.8 }}
+            whileTap={{ scale: 4.8 }}
             className={`absolute bottom-2 right-2 p-2 rounded-full shadow-lg transition ${
               likes[index]
                 ? "bg-gradient-to-r from-orange-400 to-green-400 text-white"

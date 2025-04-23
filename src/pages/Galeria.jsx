@@ -8,7 +8,7 @@ function Galeria() {
   return (
     <>
         <Navbar/>
-        <GalleryItem/>
+        <GalleryItem/>  
         <Footer/>
     </>
     
