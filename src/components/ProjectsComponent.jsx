@@ -3,7 +3,6 @@ import projetos from "../data/projetos";
 import ProjectCard from "../components/ProjectCard";
 import { motion } from "framer-motion";
 
-
 export const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   show: {
@@ -20,7 +19,7 @@ export const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.15, // anima um a um
+      staggerChildren: 0.15,
     },
   },
 };
@@ -34,7 +33,7 @@ const ProjectsComponent = () => {
       variants={containerVariants}
     >
       <motion.h1
-        className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center text-gray-800"
+        className="text-3xl sm:text-3xl md:text-3xl font-bold pt-10 mb-10 text-center text-blue-900"
         variants={fadeInUp}
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
@@ -43,10 +42,10 @@ const ProjectsComponent = () => {
         Projetos Realizados
       </motion.h1>
 
-      <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 ">
         {projetos.map((projeto, index) => (
           <motion.div key={projeto.id} variants={fadeInUp}>
-            <ProjectCard projeto={projeto} index={index}/>
+            <ProjectCard projeto={projeto} index={index} />
           </motion.div>
         ))}
       </div>

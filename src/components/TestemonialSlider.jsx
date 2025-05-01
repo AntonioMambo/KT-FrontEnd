@@ -17,9 +17,9 @@ function TestimonialSlider() {
           transition={{ duration: 2.5 }}
           className="text-2xl md:text-3xl font-medium text-blue-950"
         >
-          Assista <span className="text-orange-500">testemunho</span> de jovens
+          Assista <span className="text-blue-900 font-bold">testemunho</span> de jovens
           que aceitarama a ajuda da{" "}
-          <span className="bg-gradient-to-r from-orange-400 to-blue-900 text-transparent bg-clip-text font-bold ">
+          <span className="text-blue-900 font-bold">
             Kutchindja
           </span>
           .

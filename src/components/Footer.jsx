@@ -72,15 +72,15 @@ function Footer() {
           <ul className="space-y-4 text-sm text-blue-950">
             <li className="flex items-center gap-3">
               <MdOutlineEmail size={20} />
-              <span>tonymamb089@gmail.com</span>
+              <span>associacaokuthindja@gmail.com</span>
             </li>
             <li className="flex items-center gap-3">
               <BsTelephone size={20} />
-              <span>+258 852074332</span>
+              <span>+258 861123869</span>
             </li>
             <li className="flex items-center gap-3">
               <TiLocationOutline size={20} />
-              <span>Avenida Eduardo Mondlane</span>
+              <span>Avenida Kwame Nkruma N° 1519</span>
             </li>
           </ul>
         </motion.div>

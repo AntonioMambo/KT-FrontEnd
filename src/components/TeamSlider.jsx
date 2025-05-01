@@ -30,7 +30,7 @@ function TeamSlider() {
           transition={{ duration: 2.5 }}
           className="text-2xl md:text-3xl font-medium text-blue-950"
         >
-          <span className="bg-gradient-to-r from-orange-400 to-blue-900 text-transparent bg-clip-text font-bold">Frases motivacionais</span> de
+          <span className="text-blue-900 font-bold">Frases motivacionais</span> de
           profissionais que se aliaram à causa que defendemos.
         </motion.h2>
       </div>

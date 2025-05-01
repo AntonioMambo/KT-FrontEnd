@@ -2,6 +2,13 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "/Logo.png"; // Ajusta o caminho da tua logo
+import { FaFacebookF } from "react-icons/fa6";
+import { IoLogoInstagram } from "react-icons/io5";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+
+
+
 
 export default function Navbar() {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -11,7 +18,7 @@ export default function Navbar() {
   const toggleNavbar = () => setMobileDrawerOpen(!mobileDrawerOpen);
 
   return (
-    <nav className="bg-white shadow-md z-50 py-3 fixed bottom-0 w-full lg:sticky lg:top-0">
+    <nav className="bg-white shadow-md z-50 py-3 fixed top-0 w-full lg:sticky lg:top-0">
       <div className="container px-4 mx-auto relative text-sm">
         <div className="flex items-center justify-between">
           {/* LOGO */}
@@ -53,7 +60,7 @@ export default function Navbar() {
           </div>
 
           {/* BOTÃO MOBILE */}
-          <div className="fixed bottom-4 right-4 z-50 lg:hidden">
+          <div className="fixed top-4 right-4 z-50 lg:hidden">
             <button
               onClick={toggleNavbar}
               className="bg-blue-900 text-white p-3 rounded-full shadow-lg"
@@ -66,19 +73,14 @@ export default function Navbar() {
 
       {/* MENU SLIDE BAR MOBILE */}
       <div
-        className={`fixed bottom-0 left-0  w-full max-w-xs bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full  w-full max-w-xs bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${
           mobileDrawerOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="p-6 flex flex-col h-full justify-between">
-          {/* Cabeçalho */}
-          <div className="flex justify-between items-center mb-8">
-            <img src={logo} alt="Logo" className="h-10 w-10" />
-          </div>
-
           {/* Itens do menu */}
           <ul className="space-y-6 text-base font-semibold">
-            <li>
+            <li className="border-b-2 border-blue-100 pb-2">
               <Link
                 to="/"
                 onClick={toggleNavbar}
@@ -87,7 +89,7 @@ export default function Navbar() {
                 Início
               </Link>
             </li>
-            <li>
+            <li className="border-b-2 border-blue-100 pb-2">
               <Link
                 to="/sobre"
                 onClick={toggleNavbar}
@@ -96,16 +98,16 @@ export default function Navbar() {
                 Sobre Nós
               </Link>
             </li>
-            <li>
+            <li className="border-b-2 border-blue-100 pb-2">
               <Link
                 to="/projetos"
                 onClick={toggleNavbar}
-                className={isActive("/projetos") ? "text-blue-500" : ""}
+                className={isActive("/projetos") ? "text-blue-100" : ""}
               >
                 Projetos
               </Link>
             </li>
-            <li>
+            <li className="border-b-2 border-blue-100 pb-2">
               <Link
                 to="/galeria"
                 onClick={toggleNavbar}
@@ -126,6 +128,20 @@ export default function Navbar() {
           </ul>
 
           {/* Rodapé com redes sociais ou outros links, se quiseres */}
+          <div className="flex justify-center mt-6 space-x-4">
+            <a href="https://www.facebook.com/share/18q9snswNo/?mibextid=wwXIfr" className="text-blue-500 m-2 hover:text-blue-700">
+              <FaFacebookF size={24}/>
+            </a>
+            <a href="https://www.instagram.com/kutchindja_official?igsh=MTNoNmJndHV1aXIwYw==" className="text-blue-500 m-2 hover:text-blue-700">
+              <IoLogoInstagram size={24}/>
+            </a>
+            {/* <a href="#" className="text-blue-500 hover:text-blue-700">
+              <FaTwitter/>
+            </a>
+            <a href="#" className="text-blue-500 hover:text-blue-700">
+              <FaLinkedinIn/>
+            </a> */}
+          </div>
         </div>
       </div>
 

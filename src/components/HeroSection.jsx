@@ -53,7 +53,7 @@ function HeroSection() {
           className="mt-10 text-lg text-center max-w-4xl text-opacity-70"
         >
           Com a{" "}
-          <span className="" style={{ color: "#E28743" }}>
+          <span className="text-blue-900 font-bold">
             missão
           </span>{" "}
           de empoderar os jovens excluídos e marginalizados, para que estes
@@ -117,8 +117,8 @@ function HeroSection() {
             </motion.div>
 
             <motion.p className="mt-4 text-center text-lg text-gray-700">
-              Sao <span style={{ color: "#E28743" }}>200 +</span> jovens que sao{" "}
-              <span style={{ color: "#E28743" }}>apoiados e ajudados</span> pela
+              Sao <span className="text-blue-900 font-bold">+200 </span> jovens que sao{" "}
+              <span className="text-blue-900 font-bold">apoiados e ajudados</span> pela
               Kutchindja, tu podes ser mais um.
             </motion.p>
             <div className="flex justify-center my-8">
