@@ -54,19 +54,19 @@ const ProjectCard = ({ projeto, index }) => {
             <img
               src={projeto.ImageProjeto}
               alt={`Foto do projeto ${projeto.nome}`}
-              className="h-88 w-full object-cover"
+              className="h-88 w-full object-cover "
             />
           </SwiperSlide>
         ))}
       </Swiper>
 
       <div className="p-4">
-        <h2 className="text-xl font-semibold">{projeto.nome}</h2>
+        <h2 className="text-xl font-semibold text-blue-900">{projeto.nome}</h2>
         <p className="text-sm text-gray-600">{projeto.objetivo}</p>
         <div className="flex justify-between">
           <Link
             to={`/projeto/${projeto.id}`}
-            className="text-orange-500 mt-2 block font-extrabold"
+            className="text-blue-900 mt-2 block font-extrabold"
           >
             {projeto.Estado}
           </Link>

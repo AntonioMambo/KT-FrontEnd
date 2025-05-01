@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import { Link } from "react-router-dom";
 import { projetos } from "../constants/index.jsx";
-import { motion } from "framer-motion"; // Importando o framer motion
+import { motion, AnimatePresence } from "framer-motion"; // Importando o framer motion
 
 function ProjectSlider() {
   return (
@@ -14,7 +14,7 @@ function ProjectSlider() {
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
-        fadeEffect={{ crossFade: true }} // <== melhora a transição
+        fadeEffect={{ crossFade: true }} 
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
@@ -26,22 +26,17 @@ function ProjectSlider() {
           <SwiperSlide key={index}>
             <div className="relative w-full h-full">
               {/* Link envolvendo a imagem para redirecionamento */}
-              <Link to={`/detalhes/${projeto.id}`} className="w-full h-full block">
+              <Link
+                to="/projetos"
+                className="w-full h-full block"
+              >
                 {/* Imagem com animação do Framer Motion */}
                 <motion.img
                   src={projeto.ImageProjeto}
                   alt={projeto.NomeProjeto}
                   className="w-full h-full object-cover"
                   initial={{ y: 0 }}
-                  whileInView={{
-                    y: [-20, 20],
-                    transition: {
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                    },
-                  }}
-                  whileHover={{ scale: 1.05, opacity: 0.9 }} // Animação de hover
+                  whileHover={{ scale: 1.08 }} // Animação de hover
                   viewport={{ once: true }}
                   transition={{ duration: 0.3 }}
                 />
@@ -49,12 +44,18 @@ function ProjectSlider() {
 
               {/* Texto no canto inferior esquerdo */}
               <div className="absolute bottom-4 left-4 max-w-[90%] p-3 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold text-white drop-shadow-md z-10">
-                <Link
-                  to={`/detalhes/${projeto.id}`}
-                  className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text"
-                >
-                  {projeto.NomeProjeto}
-                </Link>
+                <AnimatePresence mode="wait">
+                  <motion.p
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -50 }}
+                    transition={{ duration: 0.6 }}
+                    className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text font-bold"
+                  >
+                    {projeto.NomeProjeto}
+                  </motion.p>
+                </AnimatePresence>
               </div>
             </div>
           </SwiperSlide>

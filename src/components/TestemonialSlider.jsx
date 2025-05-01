@@ -19,7 +19,7 @@ function TestimonialSlider() {
         >
           Assista <span className="text-orange-500">testemunho</span> de jovens
           que aceitarama a ajuda da{" "}
-          <span className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text font-bold ">
+          <span className="bg-gradient-to-r from-orange-400 to-blue-900 text-transparent bg-clip-text font-bold ">
             Kutchindja
           </span>
           .
@@ -45,8 +45,8 @@ function TestimonialSlider() {
                 className="h-48 w-full object-cover"
               />
               <div className="flex justify-end -mt-6 pr-4 z-10">
-                <button className="bg-purple-600 text-white px-4 py-1 rounded-full shadow-md text-sm">
-                  ▶ Watch
+                <button className="bg-blue-900 text-white px-5 py-5 rounded-full shadow-md text-sm cursor:pointer hover:bg-blue-200 transition duration-300">
+                  ▶ 
                 </button>
               </div>
 

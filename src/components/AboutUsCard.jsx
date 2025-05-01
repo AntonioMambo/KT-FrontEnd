@@ -60,10 +60,15 @@ function AboutUsCard() {
               variants={childVariants}
               className="text-gray-600 text-base md:text-lg leading-relaxed"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptatibus. <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptatibus.
+              Somos à KUTCHINDJA, associação de jovens pela diversidade e
+              inclusão, existente em Moçambique à cerca de dois anos, e
+              legalmente reconhecida atuando na província de Maputo. A
+              ASSOCIAÇÃO KUTCHINDJA, tem como principal missão, defender os
+              direitos humanos dos jovens Gays, Bissexuais e HSH (homens que
+              fazem sexo com homens), que se encontrem marginalizados devido a
+              sua orientação sexual, empoderando-os para que estes possam se
+              engajar ativamente, na construção de uma sociedade mais justa,
+              igualitária e que respeite as diferenças.
             </motion.p>
           </div>
 
@@ -96,7 +101,7 @@ function AboutUsCard() {
           initial="initial"
           animate="animate"
           variants={iconVariants(2.5)}
-          className="flex flex-col items-center text-center"
+          className="flex flex-col p-3 items-center text-center bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105"
         >
           <BiTargetLock className="text-4xl text-blue-500 mb-4" />
           <h3 className="text-2xl md:text-3xl font-bold text-blue-950">
@@ -113,7 +118,7 @@ function AboutUsCard() {
           initial="initial"
           animate="animate"
           variants={iconVariants(3)}
-          className="flex flex-col items-center text-center"
+          className="flex flex-col p-3 items-center text-center bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105 "
         >
           <FaEye className="text-4xl text-blue-500 mb-4" />
           <h3 className="text-2xl md:text-3xl font-bold text-blue-950">
@@ -129,7 +134,7 @@ function AboutUsCard() {
           initial="initial"
           animate="animate"
           variants={iconVariants(5)}
-          className="flex flex-col items-center text-center"
+          className="flex flex-col p-3 items-center text-center bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105"
         >
           <FaHandshake className="text-4xl text-blue-500 mb-4" />
           <h3 className="text-2xl md:text-3xl font-bold text-blue-950">

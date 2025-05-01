@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import img1 from "../assets/images/img1.jpg";
 import user1 from "/images/User1.jpg";
 import user2 from "/images/User2.jpg";
 import user3 from "/images/User3.jpg";
 import user4 from "/images/User4.jpg";
 import user5 from "/images/User5.jpg";
+import { User2 } from "lucide-react";
 
 function HeroSection() {
   return (
@@ -19,14 +19,30 @@ function HeroSection() {
           style={{ color: "#1E2664" }}
           className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide text-opacity-70  "
         >
-          Associação de jovens pela{" "}
-          <span className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text">
-            diversidade
-          </span>{" "}
+          Associação de jovens pela {""} 
+          <span className="text-red-500">d</span>
+          <span className="text-orange-500">i</span>
+          <span className="text-green-500">v</span>
+          <span className="text-blue-500">e</span>
+          <span className="text-fuchsia-500">r</span>
+          <span className="text-red-500">s</span>
+          <span className="text-orange-500">i</span>
+          <span className="text-green-500">d</span>
+          <span className="text-blue-500">a</span>
+          <span className="text-fuchsia-500">d</span>
+          <span className="text-red-500">e</span> {""}
+          
           e{" "}
-          <span className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text">
-            inclusão
-          </span>{" "}
+          <span className="text-red-500">i</span>
+          <span className="text-orange-500">n</span>
+          <span className="text-green-500">c</span>
+          <span className="text-blue-500">l</span>
+          <span className="text-fuchsia-500">u</span>
+          <span className="text-red-500">s</span>
+          <span className="text-orange-500">ã</span>
+          <span className="text-green-500">o</span>
+
+          {" "}
           !
         </motion.h1>
         <motion.p
@@ -52,14 +68,14 @@ function HeroSection() {
         >
           <a
             href="/sobre"
-            className="py-3 px-4 rounded-md text-white text-bold hover:"
-            style={{ backgroundColor: "#E28743" }}
+            className="bg-blue-800 py-3 px-4 rounded-md text-white text-bold hover:"
+            // style={{ backgroundColor: "#E28743" }}
           >
             Saiba mais
           </a>
           <a
             href=""
-            className="py-3 px-4 mx-3 rounded-nd border border-amber-500 text-amber-500"
+            className="py-3 px-4 mx-3 rounded-nd border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white"
           >
             Participe da Causa
           </a>
@@ -108,7 +124,7 @@ function HeroSection() {
             <div className="flex justify-center my-8">
               <a
                 href=""
-                className="justify-center items-center  py-3 px-4 rounded-nd border border-amber-500 text-amber-500"
+                className="justify-center items-center  py-3 px-4 rounded-nd border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white"
               >
                 Particisas de ajuda ?
               </a>
