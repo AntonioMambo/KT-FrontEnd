@@ -12,7 +12,7 @@ const teamData = [
       "Defensor dos Direitos Humanos, com foco na promoção e proteção dos direitos das pessoas LGBTQIA+. A sua experiência de trabalho abrange intervenções em comunidades urbanas e rurais, bem como a gestão e mobilização de movimentos juvenis. Ao longo da sua trajectória de activismo, Lionel integrou-se em importantes iniciativas, como o projecto +PorNós, cujo objectivo é ampliar o acesso à informação e aos serviços de saúde para populações-chave. Destaca-se também pela sua actuação no projecto Empreender Com Orgulho, que visa influenciar positivamente a redução da desigualdade socioeconómica enfrentada por pessoas LGBTQIA+ em Moçambique. Profissional multifacetado, Lionel tem-se destacado na organização de eventos que promovem a visibilidade positiva da comunidade LGBTQIA+ e na criação de espaços seguros de partilha, empoderamento e fortalecimento de redes comunitárias.",
     frase_motivacional:
       "Blinde-se com o conhecimento das leis. Antes de lutares pelos teus direitos, conhece os teus direitos.",
-    imagem: "https://media.istockphoto.com/id/1434212178/photo/middle-eastern-lady-using-laptop-working-online-sitting-in-office.jpg?s=2048x2048&w=is&k=20&c=U0nKYf9Ggh8S77U7DvPlFpRE0bKiSOD9gr9naxHEpfM=",
+    imagem: "https://cdn-icons-png.freepik.com/256/7390/7390449.png?uid=R78469827&ga=GA1.1.1129599235.1741291614&semt=ais_hybrid",
   },
   {
     nome: "Tarik Azizi",
@@ -38,7 +38,7 @@ const teamData = [
     biografia:
       "Abdul Amid Bacar tem mais de 3 anos de experiência na área de Monitoria, Avaliação e Responsabilização, trabalhando em diversos projectos que tenham como beneficiários pessoas LGBTQIA+. Ele participou de série de treinamento de Monitoria e Avaliação, entre eles o treinamento da HIVOS e do Passos. Abdul Amid Bacar é oficial de programas, comprometido em garantir a qualidade e eficiência das actividades realizadas a nível da associação Kutchindja.",
     frase_motivacional: "A persistência realiza o impossível.",
-    imagem: "https://media.istockphoto.com/id/1493473169/photo/confident-student-studying-remote-looking-at-laptop-screen.jpg?s=612x612&w=0&k=20&c=CGJuIEbkn-6NJJxp-tw0eA31aJwSel7klGzh78I28-k=",
+    imagem: "https://cdn-icons-png.freepik.com/256/7390/7390449.png?uid=R78469827&ga=GA1.1.1129599235.1741291614&semt=ais_hybrid",
   },
   {
     nome: "Marcos Chambe",

@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import SarauBlog from "../assets/Blog/SarauBlog.jpg"
 
 export default function BlogCard() {
   return (
-    <div className="bg-white min-h-screen px-4 md:px-12 py-10 text-gray-800">
+    <div className="bg-white min-h-screen px-4 md:px-12 py-20 text-gray-800 lg:py-10">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,7 +28,7 @@ export default function BlogCard() {
         className="mb-10"
       >
         <img
-          src="https://drive.google.com/file/d/1Nyv7sDJy1Eg2tDhg60xdOzkM98YB2Rrx/view?usp=drive_link" // Substituir pela URL real ou importar localmente
+          src= {SarauBlog}
           alt="Workshop e Sarau Cultural"
           className="w-full max-h-[500px] object-cover rounded-2xl shadow-md"
         />

@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import BlogCard from '../components/BlogCard'
 
 
+
 function Blog() {
   return (
 

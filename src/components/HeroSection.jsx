@@ -19,7 +19,7 @@ function HeroSection() {
           style={{ color: "#1E2664" }}
           className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide text-opacity-70  "
         >
-          Associação de jovens pela {""} 
+          Associação de jovens pela {""}
           <span className="text-red-300">d</span>
           <span className="text-orange-300">i</span>
           <span className="text-green-300">v</span>
@@ -30,9 +30,7 @@ function HeroSection() {
           <span className="text-red-300">d</span>
           <span className="text-orange-300">a</span>
           <span className="text-green-300">d</span>
-          <span className="text-blue-300">e</span> {""}
-          
-          e{" "}
+          <span className="text-blue-300">e</span> {""}e{" "}
           <span className="text-fuchsia-300">i</span>
           <span className="text-yellow-500">n</span>
           <span className="text-red-300">c</span>
@@ -40,10 +38,7 @@ function HeroSection() {
           <span className="text-green-300">u</span>
           <span className="text-blue-300">s</span>
           <span className="text-fuchsia-300">ã</span>
-          <span className="text-red-300">o</span>
-
-          {" "}
-          !
+          <span className="text-red-300">o</span> !
         </motion.h1>
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
@@ -52,13 +47,10 @@ function HeroSection() {
           style={{ color: "#1E2664" }}
           className="mt-10 text-lg text-center max-w-4xl text-opacity-70"
         >
-          Com a{" "}
-          <span className="text-blue-900 font-bold">
-            missão
-          </span>{" "}
-          de empoderar os jovens excluídos e marginalizados, para que estes
-          possam se engajar ativamente na construção de uma sociedade mais
-          justa, igualitária e que respeite as diferenças.
+          Com a <span className="text-blue-900 font-bold">missão</span> de
+          empoderar os jovens excluídos e marginalizados, para que estes possam
+          se engajar ativamente na construção de uma sociedade mais justa,
+          igualitária e que respeite as diferenças.
         </motion.p>
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
@@ -69,7 +61,6 @@ function HeroSection() {
           <a
             href="/sobre"
             className="bg-blue-800 py-3 px-4 rounded-md text-white text-bold hover:"
-            // style={{ backgroundColor: "#E28743" }}
           >
             Saiba mais
           </a>
@@ -116,10 +107,30 @@ function HeroSection() {
               />
             </motion.div>
 
-            <motion.p className="mt-4 text-center text-lg text-gray-700">
-              Sao <span className="text-blue-900 font-bold">varios </span> jovens que sao{" "}
-              <span className="text-blue-900 font-bold">apoiados e ajudados</span> pela
-              Kutchindja, tu podes ser mais um.
+            <motion.p
+              className="mt-10 text-lg text-center text-opacity-70"
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1 }}
+              style={{ color: "#1E2664" }}
+            >
+              A Kutchindja tem acolhido e apoiado jovens da comunidade{" "}
+              <span className="text-red-300">L</span>
+              <span className="text-orange-300">G</span>
+              <span className="text-green-300">B</span>
+              <span className="text-blue-300">T</span>
+              <span className="text-fuchsia-300">Q</span>
+              <span className="text-red-300">I</span>
+              <span className="text-yellow-300">A</span>
+              <span className="text-red-300">+ </span>
+                 na construção dos seus projetos de vida.{" "}
+              <p>
+                Faça parte desta rede de apoio e pertença a um espaço seguro,
+                onde a sua{" "}
+                <span className="text-blue-900 font-bold">
+                  identidade é valorizada.
+                </span>
+              </p>
             </motion.p>
             <div className="flex justify-center my-8">
               <a

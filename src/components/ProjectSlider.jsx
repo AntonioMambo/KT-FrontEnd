@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import { Link } from "react-router-dom";
-import { projetos } from "../constants/index.jsx";
+import projetos from "../data/projetos";
 import { motion, AnimatePresence } from "framer-motion"; // Importando o framer motion
 
 function ProjectSlider() {
@@ -32,8 +32,8 @@ function ProjectSlider() {
               >
                 {/* Imagem com animação do Framer Motion */}
                 <motion.img
-                  src={projeto.ImageProjeto}
-                  alt={projeto.NomeProjeto}
+                  src={projeto.banner }
+                  alt={projeto.nome}
                   className="w-full h-full object-cover"
                   initial={{ y: 0 }}
                   whileHover={{ scale: 1.08 }} // Animação de hover
@@ -53,7 +53,7 @@ function ProjectSlider() {
                     transition={{ duration: 0.6 }}
                     className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text font-bold"
                   >
-                    {projeto.NomeProjeto}
+                    {projeto.nome}
                   </motion.p>
                 </AnimatePresence>
               </div>

@@ -34,15 +34,15 @@ const ProjectsComponent = () => {
       variants={containerVariants}
     >
       <motion.h1
-        className="text-center text-blue-900 font-bold py-4 mb-8 text-3xl sm:text-4xl md:text-5xl"
+        className="text-center text-blue-900 font-bold py-4 mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-10 lg:mt-4"
         variants={fadeInUp}
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1 }}
       >
-        Projetos Realizados
+        Projetos Realizados 
       </motion.h1>
-  
+
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
         {projetos.map((projeto, index) => (
           <motion.div key={projeto.id} variants={fadeInUp}>
@@ -52,6 +52,6 @@ const ProjectsComponent = () => {
       </div>
     </motion.div>
   );
-}  
+};
 
 export default ProjectsComponent;
