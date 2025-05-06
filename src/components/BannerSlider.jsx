@@ -6,13 +6,23 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import { Link } from "react-router-dom";
 
-
-const imagens = Object.values(
+// Importação dinâmica com a sintaxe atualizada do Vite
+const imagensOriginais = Object.entries(
   import.meta.glob("../assets/ABImages/*.{png,jpg,jpeg,svg,gif}", {
     eager: true,
-    as: "url",
+    query: "?url",
+    import: "default",
   })
-);
+).map(([path, url]) => {
+  const alt = path.split("/").pop().split(".")[0].replace(/[-_]/g, " ");
+  return { url, alt };
+});
+
+// Se houver menos de 2 imagens, duplicamos para evitar erro no loop
+const imagens =
+  imagensOriginais.length < 2
+    ? [...imagensOriginais, ...imagensOriginais]
+    : imagensOriginais;
 
 function BannerSlider() {
   return (
@@ -24,21 +34,18 @@ function BannerSlider() {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        loop={true}
+        loop={imagensOriginais.length > 1} // só ativa o loop se houver mais de 1 imagem original
         className="w-full h-full"
       >
         {imagens.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="relative w-full h-full">
-              {/* Imagem com escurecimento */}
               <img
-                src={image}
+                src={image.url}
                 alt={image.alt}
                 className="w-full h-full object-cover brightness-30"
                 loading="lazy"
               />
-
-              {/* Texto "Sobre Nos" no canto inferior direito */}
               <div className="absolute bottom-4 left-4 p-3 text-2xl sm:text-4xl md:text-6xl lg:text-9xl font-semibold text-gray-800 shadow-lg">
                 <Link
                   to="/sobre"

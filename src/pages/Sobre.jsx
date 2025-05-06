@@ -3,17 +3,16 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BannerSlider from "../components/BannerSlider";
 import AboutUsCard from "../components/AboutUsCard";
-import TeamSlider from "../components/TeamSlider";
 import AboutTeam from "../components/AboutTeam";
 
 function Sobre() {
   return (
     <>
       <Navbar />
-      <BannerSlider/>
+      <BannerSlider />
       <div className="max-w-7xl mx-auto pt-10 px-6">
         <AboutUsCard />
-        <AboutTeam/>
+        <AboutTeam />
       </div>
       <Footer />
     </>

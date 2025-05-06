@@ -1,4 +1,3 @@
-import bannerImages from "./bannerImages.jsx";
 import { handsoffFotos } from "./ExtractFoto.jsx";
 import img1 from "/images/Projetos/+pornos.jpg";
 import img2 from "/images/Projetos/conhecerpoder.jpg";

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import bannerImages from "../data/bannerImages";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { motion } from "framer-motion";
 
