@@ -8,13 +8,20 @@ import { Link } from "react-router-dom";
 import projetos from "../data/projetos";
 import { motion, AnimatePresence } from "framer-motion"; // Importando o framer motion
 
+const imagens = Object.values(
+  import.meta.glob("../assets/ABImages/*.{png,jpg,jpeg,svg,gif}", {
+    eager: true,
+    as: "url",
+  })
+);
+
 function ProjectSlider() {
   return (
     <div className="w-full h-[300px] sm:h-[200px] md:h-[400px] lg:h-[550px] overflow-hidden relative">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
-        fadeEffect={{ crossFade: true }} 
+        fadeEffect={{ crossFade: true }}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
@@ -27,12 +34,12 @@ function ProjectSlider() {
             <div className="relative w-full h-full">
               {/* Link envolvendo a imagem para redirecionamento */}
               <Link
-                 to={`/projeto/${projeto.id}`}
+                to={`/projeto/${projeto.id}`}
                 className="w-full h-full block"
               >
                 {/* Imagem com animação do Framer Motion */}
                 <motion.img
-                  src={projeto.banner }
+                  src={projeto.banner}
                   alt={projeto.nome}
                   className="w-full h-full object-cover"
                   initial={{ y: 0 }}

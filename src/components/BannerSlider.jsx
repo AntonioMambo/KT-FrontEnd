@@ -4,8 +4,15 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
-import bannerImages from "../data/bannerImages";
 import { Link } from "react-router-dom";
+
+
+const imagens = Object.values(
+  import.meta.glob("../assets/ABImages/*.{png,jpg,jpeg,svg,gif}", {
+    eager: true,
+    as: "url",
+  })
+);
 
 function BannerSlider() {
   return (
@@ -20,12 +27,12 @@ function BannerSlider() {
         loop={true}
         className="w-full h-full"
       >
-        {bannerImages.map((image, index) => (
+        {imagens.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="relative w-full h-full">
               {/* Imagem com escurecimento */}
               <img
-                src={image.link}
+                src={image}
                 alt={image.alt}
                 className="w-full h-full object-cover brightness-30"
                 loading="lazy"
