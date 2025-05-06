@@ -1,3 +1,4 @@
+/* ProjectsComponent.jsx */
 import React from "react";
 import projetos from "../data/projetos";
 import ProjectCard from "../components/ProjectCard";
@@ -27,22 +28,22 @@ export const containerVariants = {
 const ProjectsComponent = () => {
   return (
     <motion.div
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10"
+      className="w-full min-h-screen px-4 sm:px-6 lg:px-8 py-8 bg-white"
       initial="hidden"
       animate="show"
       variants={containerVariants}
     >
       <motion.h1
-        className="text-3xl sm:text-3xl md:text-3xl font-bold pt-10 mb-10 text-center text-blue-900"
+        className="text-center text-blue-900 font-bold py-4 mb-8 text-3xl sm:text-4xl md:text-5xl"
         variants={fadeInUp}
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1 }}
       >
         Projetos Realizados
       </motion.h1>
-
-      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 ">
+  
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
         {projetos.map((projeto, index) => (
           <motion.div key={projeto.id} variants={fadeInUp}>
             <ProjectCard projeto={projeto} index={index} />
@@ -51,6 +52,6 @@ const ProjectsComponent = () => {
       </div>
     </motion.div>
   );
-};
+}  
 
 export default ProjectsComponent;

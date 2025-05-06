@@ -27,7 +27,7 @@ function ProjectSlider() {
             <div className="relative w-full h-full">
               {/* Link envolvendo a imagem para redirecionamento */}
               <Link
-                to="/projetos"
+                 to={`/projeto/${projeto.id}`}
                 className="w-full h-full block"
               >
                 {/* Imagem com animação do Framer Motion */}

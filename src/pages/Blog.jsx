@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import BlogCard from '../components/BlogCard'
 
 
 function Blog() {
@@ -8,7 +9,7 @@ function Blog() {
 
     <>
         <Navbar/>
-        <div>Blog</div>
+        <BlogCard/>
         <Footer/>
     </>
     

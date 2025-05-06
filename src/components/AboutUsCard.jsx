@@ -80,7 +80,7 @@ function AboutUsCard() {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.5 }}
-              src={img1}
+              src= {img1}
               alt="Grupo em roda"
               className="rounded-xl shadow-lg transition duration-300 ease-in-out group-hover:brightness-75 w-full h-auto object-cover"
             />

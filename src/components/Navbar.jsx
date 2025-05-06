@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "/Logo.png"; // Ajusta o caminho da tua logo
+import logo from "/Logo.png"; // Ajusta o caminho da logo
 import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
-import { FaTwitter } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-
-
-
+import { FaYoutube } from "react-icons/fa";
 
 export default function Navbar() {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -31,6 +27,7 @@ export default function Navbar() {
             {[
               { to: "/", label: "Inicio" },
               { to: "/sobre", label: "Sobre Nós" },
+              { to: "/blog", label: "Blog" },
               { to: "/projetos", label: "Projetos" },
               { to: "/galeria", label: "Galeria" },
             ].map(({ to, label }) => (
@@ -84,7 +81,7 @@ export default function Navbar() {
               <Link
                 to="/"
                 onClick={toggleNavbar}
-                className={isActive("/") ? "text-blue-500" : ""}
+                className={isActive("/") ? "text-blue-900" : ""}
               >
                 Início
               </Link>
@@ -93,16 +90,25 @@ export default function Navbar() {
               <Link
                 to="/sobre"
                 onClick={toggleNavbar}
-                className={isActive("/sobre") ? "text-blue-500" : ""}
+                className={isActive("/sobre") ? "text-blue-900" : ""}
               >
                 Sobre Nós
               </Link>
             </li>
             <li className="border-b-2 border-blue-100 pb-2">
               <Link
+                to="/blog"
+                onClick={toggleNavbar}
+                className={isActive("/blog") ? "text-blue-900" : ""}
+              >
+                Blog
+              </Link>
+            </li>
+            <li className="border-b-2 border-blue-100 pb-2">
+              <Link
                 to="/projetos"
                 onClick={toggleNavbar}
-                className={isActive("/projetos") ? "text-blue-100" : ""}
+                className={isActive("/projetos") ? "text-blue-900" : ""}
               >
                 Projetos
               </Link>
@@ -111,7 +117,7 @@ export default function Navbar() {
               <Link
                 to="/galeria"
                 onClick={toggleNavbar}
-                className={isActive("/galeria") ? "text-blue-500" : ""}
+                className={isActive("/galeria") ? "text-blue-900" : ""}
               >
                 Galeria
               </Link>
@@ -129,11 +135,23 @@ export default function Navbar() {
 
           {/* Rodapé com redes sociais ou outros links, se quiseres */}
           <div className="flex justify-center mt-6 space-x-4">
-            <a href="https://www.facebook.com/share/18q9snswNo/?mibextid=wwXIfr" className="text-blue-500 m-2 hover:text-blue-700">
-              <FaFacebookF size={24}/>
+            <a
+              href="https://www.facebook.com/share/18q9snswNo/?mibextid=wwXIfr"
+              className="text-blue-500 m-2 hover:text-blue-700"
+            >
+              <FaFacebookF size={24} />
             </a>
-            <a href="https://www.instagram.com/kutchindja_official?igsh=MTNoNmJndHV1aXIwYw==" className="text-blue-500 m-2 hover:text-blue-700">
-              <IoLogoInstagram size={24}/>
+            <a
+              href="https://www.instagram.com/kutchindja_official?igsh=MTNoNmJndHV1aXIwYw=="
+              className="text-red-300 m-2 hover:text-blue-700"
+            >
+              <IoLogoInstagram size={24} />
+            </a>
+            <a
+              href="https://youtube.com/@associacaokutchindja?si=xbTMjKL5hoD9w4ik"
+              className="text-red-500 m-2 hover:text-blue-700"
+            >
+              <FaYoutube size={24} />
             </a>
             {/* <a href="#" className="text-blue-500 hover:text-blue-700">
               <FaTwitter/>

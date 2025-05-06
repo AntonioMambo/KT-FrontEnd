@@ -4,8 +4,9 @@ import HeroSection from "../components/HeroSection";
 import TeamSlider from "../components/TeamSlider";
 import TestimonialSlider from "../components/TestemonialSlider";
 import Footer from "../components/Footer";
-import BannerSlider from "../components/BannerSlider";
 import ProjectSlider from "../components/ProjectSlider";
+import { ImpactStats } from "../components/ImpactStats";
+import { statsData } from "../data/statsData";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         <HeroSection />
         <TestimonialSlider />
         <TeamSlider />
+        <ImpactStats title="Nosso Impacto em Números" stats={statsData} />
       </div>
       <Footer />
     </>

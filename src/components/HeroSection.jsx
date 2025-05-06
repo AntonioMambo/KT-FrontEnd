@@ -20,27 +20,27 @@ function HeroSection() {
           className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide text-opacity-70  "
         >
           Associação de jovens pela {""} 
-          <span className="text-red-500">d</span>
-          <span className="text-orange-500">i</span>
-          <span className="text-green-500">v</span>
-          <span className="text-blue-500">e</span>
-          <span className="text-fuchsia-500">r</span>
-          <span className="text-red-500">s</span>
-          <span className="text-orange-500">i</span>
-          <span className="text-green-500">d</span>
-          <span className="text-blue-500">a</span>
-          <span className="text-fuchsia-500">d</span>
-          <span className="text-red-500">e</span> {""}
+          <span className="text-red-300">d</span>
+          <span className="text-orange-300">i</span>
+          <span className="text-green-300">v</span>
+          <span className="text-blue-300">e</span>
+          <span className="text-fuchsia-300">r</span>
+          <span className="text-red-300">s</span>
+          <span className="text-yellow-300">i</span>
+          <span className="text-red-300">d</span>
+          <span className="text-orange-300">a</span>
+          <span className="text-green-300">d</span>
+          <span className="text-blue-300">e</span> {""}
           
           e{" "}
-          <span className="text-red-500">i</span>
-          <span className="text-orange-500">n</span>
-          <span className="text-green-500">c</span>
-          <span className="text-blue-500">l</span>
-          <span className="text-fuchsia-500">u</span>
-          <span className="text-red-500">s</span>
-          <span className="text-orange-500">ã</span>
-          <span className="text-green-500">o</span>
+          <span className="text-fuchsia-300">i</span>
+          <span className="text-yellow-500">n</span>
+          <span className="text-red-300">c</span>
+          <span className="text-orange-300">l</span>
+          <span className="text-green-300">u</span>
+          <span className="text-blue-300">s</span>
+          <span className="text-fuchsia-300">ã</span>
+          <span className="text-red-300">o</span>
 
           {" "}
           !
@@ -117,7 +117,7 @@ function HeroSection() {
             </motion.div>
 
             <motion.p className="mt-4 text-center text-lg text-gray-700">
-              Sao <span className="text-blue-900 font-bold">+200 </span> jovens que sao{" "}
+              Sao <span className="text-blue-900 font-bold">varios </span> jovens que sao{" "}
               <span className="text-blue-900 font-bold">apoiados e ajudados</span> pela
               Kutchindja, tu podes ser mais um.
             </motion.p>
