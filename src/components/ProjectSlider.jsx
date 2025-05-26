@@ -41,7 +41,7 @@ function ProjectSlider() {
                 <motion.img
                   src={projeto.banner}
                   alt={projeto.nome}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover brightness-30"
                   initial={{ y: 0 }}
                   whileHover={{ scale: 1.08 }} // Animação de hover
                   viewport={{ once: true }}
@@ -58,7 +58,7 @@ function ProjectSlider() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -50 }}
                     transition={{ duration: 0.6 }}
-                    className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text font-bold"
+                    className="absolute bottom-4 left-4 p-3 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text"
                   >
                     {projeto.nome}
                   </motion.p>

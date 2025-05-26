@@ -52,7 +52,7 @@ function BannerSlider() {
                   className="bg-gradient-to-r from-orange-400 to-green-400 text-transparent bg-clip-text"
                 >
                   Sobre Nós
-                </Link>
+                </Link>   
               </div>
             </div>
           </SwiperSlide>

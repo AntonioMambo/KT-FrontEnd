@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import projetos from "../data/projetos";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -46,7 +45,7 @@ const ProjectCard = ({ projeto, index }) => {
           <img
             src={ projeto.banner}
             alt={`Foto do projeto ${projeto.nome}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </SwiperSlide>
       </Swiper>

@@ -5,7 +5,7 @@ import user2 from "/images/User2.jpg";
 import user3 from "/images/User3.jpg";
 import user4 from "/images/User4.jpg";
 import user5 from "/images/User5.jpg";
-import { User2 } from "lucide-react";
+
 
 function HeroSection() {
   return (
@@ -114,7 +114,7 @@ function HeroSection() {
               transition={{ duration: 1 }}
               style={{ color: "#1E2664" }}
             >
-              A Kutchindja tem acolhido e apoiado jovens da comunidade{" "}
+              A Kutchindja tem acolhido e apoiado jovens{" "}
               <span className="text-red-300">L</span>
               <span className="text-orange-300">G</span>
               <span className="text-green-300">B</span>
@@ -124,13 +124,13 @@ function HeroSection() {
               <span className="text-yellow-300">A</span>
               <span className="text-red-300">+ </span>
                  na construção dos seus projetos de vida.{" "}
-              <p>
+              <span>
                 Faça parte desta rede de apoio e pertença a um espaço seguro,
                 onde a sua{" "}
                 <span className="text-blue-900 font-bold">
                   identidade é valorizada.
                 </span>
-              </p>
+              </span>
             </motion.p>
             <div className="flex justify-center my-8">
               <a

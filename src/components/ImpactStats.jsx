@@ -10,8 +10,8 @@ export const ImpactStats = ({ title, stats, className = '' }) => {
   });
 
   return (
-    <section className={`shadow-lg font-medium mt-10 px-4 sm:px-6 lg:px-8 ${className}`}>
-      <div className="max-w-7xl mx-auto">
+    <section className={`shadow-lg font-medium mt-4 px-4 sm:px-6 lg:px-8 ${className}`}>
+      <div className="w-full mx-auto">
         <motion.h2
           ref={ref}
           whileInView={{ opacity: 1, y: 0 }}

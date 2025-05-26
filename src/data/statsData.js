@@ -11,12 +11,17 @@ export const statsData = [
     },
     {
       value: "15+ ",
-      label: "Parcerias Institucionais  ",
-      description: "CDC, HIVOS, The Other Foundation, Pathfinder Internacional, Embaixada da Alemanha,",
+      label: "Parceiros",
+      description: "ASMOG, AESMO, LAMBDA, CCM, Fundação Micaia, KWAEDJA, TRANSformar, CCM, PorEla, Kwaedja, Other Fundation",
     },
     {
-      value: "5",
+      value: "5+ ",
+      label: "Financiadores",
+      description: "HIVOS, PNUD, Pathfinder, PSI, Ready Academy",
+    },
+    {
+      value: "4",
       label: "Áreas Principais de Atuação  ",
-      description: "Saúde e HIV/SIDA, Direitos Humanos, Empoderamento Económico, Direitos Humanos e Advocacia  5.Educação e Arte 6.Inclusão Social ",
+      description: "Direitos Sexuais e Saúde Reprodutiva, Direitos Humanos, Empoderamento Económico...",
     },
   ];

@@ -30,8 +30,8 @@ function TeamSlider() {
           transition={{ duration: 2.5 }}
           className="text-2xl md:text-3xl font-medium text-blue-950"
         >
-          <span className="text-blue-900 font-bold">Frases motivacionais</span> de
-          profissionais que se aliaram à causa que defendemos.
+          <span className="text-blue-900 font-bold">Frases motivacionais</span>{" "}
+          de profissionais que se aliaram à causa que defendemos.
         </motion.h2>
       </div>
 
@@ -55,14 +55,37 @@ function TeamSlider() {
         {teamData.map((card, index) => (
           <SwiperSlide
             key={index}
-            m
             className="w-full sm:w-1/2 lg:w-1/3 px-4 py-2"
           >
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105">
-              <div className="rounded-md p-6 text-md w-full sm:text-5xl ">
-                <p className=" text-gray-600 text-sm italic mt-2">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105 h-full flex flex-col">
+              <div className="rounded-md p-6 text-md w-full sm:text-5xl flex-grow">
+                <p className="text-gray-600 text-sm italic mt-2">
                   "{card.frase_motivacional}"
                 </p>
+
+                {/* Bio section with read more functionality */}
+                {card.bio && (
+                  <div className="mt-4">
+                    <div
+                      className={`text-gray-700 text-sm leading-relaxed ${
+                        !card.expanded ? "line-clamp-4" : ""
+                      }`}
+                    >
+                      {card.bio}
+                    </div>
+                    <button
+                      onClick={() => {
+                        const newTeamData = [...teamData];
+                        newTeamData[index].expanded =
+                          !newTeamData[index].expanded;
+                        setTeamData(newTeamData);
+                      }}
+                      className="text-blue-600 hover:text-blue-800 text-xs mt-1 focus:outline-none"
+                    >
+                      {card.expanded ? "Ler menos" : "Ler mais"}
+                    </button>
+                  </div>
+                )}
 
                 <div className="flex mt-8 items-start">
                   <img
@@ -74,8 +97,7 @@ function TeamSlider() {
                     <h6 className="flex text-lg font-bold text-blue-950">
                       {card.nome}
                     </h6>
-
-                    <p className=" text-gray-600 text-sm">{card.cargo}</p>
+                    <p className="text-gray-600 text-sm">{card.cargo}</p>
                   </div>
                 </div>
               </div>

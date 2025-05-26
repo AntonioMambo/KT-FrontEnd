@@ -32,10 +32,6 @@ const Detalhes = () => {
   const { fotos } = projeto;
 
   // DEBUG: vê no console o array de fotos
-  console.log("Fotos do projeto:", projeto.fotos);
-  console.log(projeto.id);
-
-  // usa a primeira imagem, se existir
   const bgUrl = projeto.banner;
 
   return (
@@ -47,7 +43,7 @@ const Detalhes = () => {
       transition={{ duration: 0.5 }}
     >
       <div
-        className="relative h-[50vh] bg-cover bg-center"
+        className="relative h-[50vh] bg-auto bg-center"
         style={{
           backgroundImage: `url(${bgUrl})`,
         }}
@@ -70,12 +66,22 @@ const Detalhes = () => {
         whileTap={{ scale: 0.98 }}
       >
         <div className="p-6 md:p-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
+          <h1 className="inline-block pb-3 text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold bg-gradient-to-r from-orange-400 via-yellow-400 to-green-400 bg-clip-text text-transparent transition-all duration-700 ease-in-out hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">
             {projeto.nome}
           </h1>
 
+          <h1 className="text-2xl sm:text-2xl font-bold text-blue-900 mb-4">
+            Descricao
+          </h1>
           <p className="text-gray-700 text-base leading-relaxed mb-6">
-            {projeto.descricao || projeto.objetivo}
+            {projeto.descricao}
+          </p>
+
+          <h1 className="text-2xl sm:text-2xl font-bold text-blue-900 mb-4">
+            Objetivo
+          </h1>
+          <p className="text-gray-700 text-base leading-relaxed mb-6">
+            {projeto.objetivo}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

@@ -58,12 +58,11 @@ function AboutUsCard() {
               variants={childVariants}
               className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed"
             >
-              Somos à KUTCHINDJA, associação de jovens pela diversidade e
-              inclusão, existente em Moçambique há cerca de dois anos,
-              legalmente reconhecida, atuando na província de Maputo. Nossa
-              missão é defender os direitos humanos dos jovens Gays, Bissexuais
-              e HSH, empoderando-os para se engajarem ativamente na construção
-              de uma sociedade justa, igualitária e respeitadora das diferenças.
+              A KUTCHINDJA (AK) é uma associação moçambicana de jovens pela
+              diversidade e inclusão,que busca, por meio de suas ações, promover
+              o empoderamento de jovens excluídos e marginalizados para que
+              estes possam se engajar activamente na luta por uma sociedade
+              justa,igualitária e que respeite as diferenças.
             </motion.p>
           </div>
 

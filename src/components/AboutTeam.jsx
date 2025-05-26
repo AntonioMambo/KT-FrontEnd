@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import teamData from "../data/teamData";
 import { motion } from "framer-motion";
 
@@ -17,6 +17,15 @@ function AboutTeam() {
 
   const handleNext = () => {
     swiperRef.current.swiper.slideNext();
+  };
+
+  const [expandedItems, setExpandedItems] = useState({});
+
+  const toggleExpand = (index) => {
+    setExpandedItems((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
   };
 
   return (
@@ -50,12 +59,12 @@ function AboutTeam() {
         }}
       >
         {teamData.map((member, index) => (
-          <SwiperSlide key={index} className="px-4 py-6">
+          <SwiperSlide key={index} className="px-4 py-10">
             <div className="bg-white rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col items-center p-6">
               <img
                 src={member.imagem}
                 alt={member.nome}
-                className="h-24 w-24 rounded-full object-cover border-4 border-blue-200"
+                className="h-30 w-30 rounded-full object-cover border-4 border-blue-200"
               />
               <h6 className="text-lg font-semibold text-blue-950 mt-4">
                 {member.nome}
@@ -64,10 +73,26 @@ function AboutTeam() {
               <p className="text-gray-600 italic text-xs mt-2 text-center">
                 "{member.frase_motivacional}"
               </p>
+
               {member.biografia && (
-                <p className="text-sm text-gray-500 mt-4 text-justify">
-                  {member.biografia}
-                </p>
+                <>
+                  <p
+                    className={`text-sm text-gray-500 mt-4 text-justify transition-all duration-300 ${
+                      expandedItems[index] ? "" : "line-clamp-3"
+                    }`}
+                  >
+                    {member.biografia}
+                  </p>
+
+                  {member.biografia.length > 100 && (
+                    <button
+                      onClick={() => toggleExpand(index)}
+                      className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 my-2 rounded-full text-sm font-semibold hover:scale-105 transition"
+                    >
+                      {expandedItems[index] ? "Ler menos" : "Ler mais"}
+                    </button>
+                  )}
+                </>
               )}
             </div>
           </SwiperSlide>
