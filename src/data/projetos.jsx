@@ -1,8 +1,8 @@
 import { handsoffFotos } from "./ExtractFoto.jsx";
 import img1 from "/images/Projetos/PINK2.jpg";
 import img2 from "/images/Projetos/conhecerpoder.jpg";
-import img3 from "/images/Projetos/empreenderorgulho.jpg";
-import img4 from "/images/Projetos/MaisPorNos.jpg"; // corrigido
+import img3 from "/images/Projetos/EmpreenderOrgulho.jpg";
+import img4 from "/images/Projetos/MaisPorNos.jpg"; 
 import img5 from "/images/Projetos/handsoff.jpg";
 import img6 from "/images/Projetos/visaomais.jpg";
 import img7 from "/images/Projetos/WeBelong.jpg";

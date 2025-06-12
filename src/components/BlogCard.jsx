@@ -1,63 +1,87 @@
-import { motion } from "framer-motion";
-import SarauBlog from "../assets/Blog/SarauBlog.jpg"
+import React, { useState } from "react";
+import BlogData from "../data/BlogData"; // Assuming you have a data file with news items
+import { Link } from "react-router-dom";
 
-export default function BlogCard() {
+const BlogCard = () => {
+  // Estado de likes para cada imagem separado
+  const [likes, setLikes] = useState({});
+
+  // Função para alternar like de uma imagem específica
+  const toggleLike = (idx) => {
+    setLikes((prevLikes) => ({
+      ...prevLikes,
+      [idx]: !prevLikes[idx],
+    }));
+  };
   return (
-    <div className="bg-white min-h-screen px-4 md:px-12 py-20 text-gray-800 lg:py-10">
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-3xl md:text-5xl font-bold mb-6 text-center text-red-600"
-      >
-        Workshop e Sarau Cultural
-      </motion.h1>
+    <div className="p-4 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
+        {BlogData.map((item) =>
+          item.isMain ? (
+            <div
+              key={item.id}
+              className="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 bg-black rounded-xl overflow-hidden relative"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover absolute inset-0 opacity-70"
+              />
+              <div className="relative z-10 p-6 text-white flex flex-col justify-end h-full">
+                <h2 className="text-xl font-bold">{item.title}</h2>
+                <div className="flex space-x-4 mt-4 text-sm">
+                  <span>❤️ {item.likes}</span>
+                </div>
 
-      <motion.h2
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.6 }}
-        className="text-lg md:text-xl text-center mb-10 text-gray-600"
-      >
-        Papel da Mídia na Visibilização de Negócios Inclusivos
-      </motion.h2>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="mb-10"
-      >
-        <img
-          src= {SarauBlog}
-          alt="Workshop e Sarau Cultural"
-          className="w-full max-h-[500px] object-cover rounded-2xl shadow-md"
-        />
-      </motion.div>
-
-      <div className="max-w-4xl mx-auto space-y-6">
-        {textos.map((paragrafo, index) => (
-          <motion.p
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-justify text-base md:text-lg leading-relaxed"
-          >
-            {paragrafo}
-          </motion.p>
-        ))}
+                <div className="mt-4 text-center">
+                  <Link
+                    to={`/Blog/${item.id}`}
+                    className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
+                  >
+                    Saber mais
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ) : item.isSummary ? (
+            <div
+              key={item.id}
+              className="bg-white rounded-xl shadow p-4 flex flex-col justify-between"
+            >
+              <h3 className="font-semibold text-orange-500 mb-2">
+                {item.title}
+              </h3>
+              <ul className="text-sm text-gray-800 space-y-1">
+                {item.summary.map((s, i) => (
+                  <li key={i}>• {s}</li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <div
+              key={item.id}
+              className="bg-white rounded-xl shadow overflow-hidden flex flex-col"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 flex flex-col justify-between h-full">
+                <span className="text-xs text-gray-500 mb-1">
+                  {item.source}
+                </span>
+                <h3 className="text-base font-semibold mb-3">{item.title}</h3>
+                <div className="flex space-x-4 text-sm text-gray-600">
+                  <span>❤️ {item.likes}</span>
+                </div>
+              </div>
+            </div>
+          )
+        )}
       </div>
     </div>
   );
-}
+};
 
-const textos = [
-  "A Kutchindja, uma Associação de Jovens para Diversidade e Inclusão, realizou recentemente, na cidade de Maputo, um workshop e sarau cultural para promover uma reflexão sobre a importância da Mídia na promoção de negócios inclusivos e na defesa dos direitos desta comunidade.",
-  "Com o tema ‘Direitos Socioeconómicos LGBTQIA+ e o Papel da Mídia na Visibilização de Negócios Inclusivos’, o evento contou com a participação de influenciadores digitais, empreendedores LGBTQIA+ e representantes da Mídia.",
-  "Durante o workshop foram levantados os desafios enfrentados por empreendedores da comunidade LGBTQIA+ no uso de plataformas digitais para promover seus negócios, reconhecendo que, embora as ferramentas online ofereçam grande potencial de visibilidade, também impõem barreiras significativas.",
-  "A utilização de estratégias eficazes para aumentar a presença digital desses empreendimentos foi um dos principais temas discutidos, com foco em como os influenciadores digitais podem contribuir para dar voz a esses negócios.",
-  "Entre os objetivos do evento estavam a discussão das condições mediáticas e dos direitos que garantem uma vida digna e igualitária para as pessoas LGBTQIA+, além de identificar e partilhar boas práticas para a promoção de negócios inclusivos.",
-  "Os participantes também tiveram a oportunidade de estabelecer novas conexões e parcerias, com representantes da Mídia e empreendedores trocando experiências e ideias sobre como melhorar a visibilidade dos seus negócios e empreendimentos.",
-  "Com os resultados esperados de aumentar a compreensão sobre os direitos socioeconómicos das pessoas LGBTQIA+ e criar estratégias concretas para promover negócios inclusivos, o evento foi uma importante etapa na busca por um ambiente mais inclusivo, onde empreendedores LGBTQIA+ possam prosperar sem enfrentar discriminação.",
-];
+export default BlogCard;

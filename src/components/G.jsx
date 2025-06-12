@@ -3,7 +3,6 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 function G() {
-  const [loaded, setLoaded] = useState(false);
 
   // Estado de likes para cada imagem separado
   const [likes, setLikes] = useState({});

@@ -18,7 +18,7 @@ function TestimonialSlider() {
           className="text-2xl md:text-3xl font-medium text-blue-950"
         >
           Assista <span className="text-blue-900 font-bold">testemunho</span> de jovens
-          que aceitarama a ajuda da{" "}
+          que aceitaram a ajuda da{" "}
           <span className="text-blue-900 font-bold">
             Kutchindja
           </span>

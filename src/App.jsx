@@ -3,9 +3,10 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Projetos from "./pages/Projetos";
-import Blog from "./pages/Blog";
+import Blogs from "./pages/Blogs";
 import Galeria from "./pages/Galeria";
-import Detalhes from "./pages/Detalhes";
+import ProjetoDetalhes from "./pages/ProjetoDetalhes";
+import BlogDetalhes from "./pages/BlogDetalhes";
 import "./App.css";
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/projetos" element={<Projetos />} />
       <Route path="/galeria" element={<Galeria />} />
-      <Route path="/projeto/:id" element={<Detalhes />} />
-      <Route path="/blog" element={<Blog />} />
+      <Route path="/projeto/:id" element={<ProjetoDetalhes />} />
+      <Route path="/blog/:id" element={<BlogDetalhes />} />
+      <Route path="/blog" element={<Blogs />} />
       
     </Routes>
   );

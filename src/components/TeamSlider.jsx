@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import teamData from "../data/teamData";
 import { motion } from "framer-motion";
 
@@ -19,6 +19,15 @@ function TeamSlider() {
 
   const handleNext = () => {
     swiperRef.current.swiper.slideNext();
+  };
+
+  const [expandedItems, setExpandedItems] = useState({});
+
+  const toggleExpand = (index) => {
+    setExpandedItems((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
   };
 
   return (
@@ -52,55 +61,39 @@ function TeamSlider() {
           },
         }}
       >
-        {teamData.map((card, index) => (
-          <SwiperSlide
-            key={index}
-            className="w-full sm:w-1/2 lg:w-1/3 px-4 py-2"
-          >
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105 h-full flex flex-col">
-              <div className="rounded-md p-6 text-md w-full sm:text-5xl flex-grow">
-                <p className="text-gray-600 text-sm italic mt-2">
-                  "{card.frase_motivacional}"
-                </p>
+        {teamData.map((member, index) => (
+          <SwiperSlide key={index} className="px-4 py-10">
+            <div className="bg-white rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col items-center p-6">
+              <img
+                src={member.imagem}
+                alt={member.nome}
+                className="h-30 w-30 rounded-full object-cover border-4 border-blue-200"
+              />
+              <h6 className="text-lg font-semibold text-blue-950 mt-4">
+                {member.nome}
+              </h6>
+              <p className="text-sm text-gray-600">{member.cargo}</p>              
 
-                {/* Bio section with read more functionality */}
-                {card.bio && (
-                  <div className="mt-4">
-                    <div
-                      className={`text-gray-700 text-sm leading-relaxed ${
-                        !card.expanded ? "line-clamp-4" : ""
-                      }`}
-                    >
-                      {card.bio}
-                    </div>
+              {member.frase_motivacional && (
+                <>
+                  <p
+                    className={`text-sm text-gray-500 mt-4 text-justify transition-all duration-300 ${
+                      expandedItems[index] ? "" : "line-clamp-3"
+                    }`}
+                  >
+                    {member.frase_motivacional}
+                  </p>
+
+                  {member.frase_motivacional.length > 100 && (
                     <button
-                      onClick={() => {
-                        const newTeamData = [...teamData];
-                        newTeamData[index].expanded =
-                          !newTeamData[index].expanded;
-                        setTeamData(newTeamData);
-                      }}
-                      className="text-blue-600 hover:text-blue-800 text-xs mt-1 focus:outline-none"
+                      onClick={() => toggleExpand(index)}
+                      className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 my-2 rounded-full text-sm font-semibold hover:scale-105 transition"
                     >
-                      {card.expanded ? "Ler menos" : "Ler mais"}
+                      {expandedItems[index] ? "Ler menos" : "Ler mais"}
                     </button>
-                  </div>
-                )}
-
-                <div className="flex mt-8 items-start">
-                  <img
-                    src={card.imagem}
-                    alt={card.nome}
-                    className="h-12 w-12 mr-6 rounded-full object-cover object-top"
-                  />
-                  <div>
-                    <h6 className="flex text-lg font-bold text-blue-950">
-                      {card.nome}
-                    </h6>
-                    <p className="text-gray-600 text-sm">{card.cargo}</p>
-                  </div>
-                </div>
-              </div>
+                  )}
+                </>
+              )}
             </div>
           </SwiperSlide>
         ))}

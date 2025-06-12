@@ -1,20 +1,20 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import BlogCard from '../components/BlogCard'
+import Blog from '../components/BlogCard'
 
 
 
-function Blog() {
+function Blogs() {
   return (
 
     <>
         <Navbar/>
-        <BlogCard/>
+        <Blog/>
         <Footer/>
     </>
     
   )
 }
 
-export default Blog
+export default Blogs
