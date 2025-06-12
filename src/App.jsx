@@ -8,10 +8,23 @@ import Galeria from "./pages/Galeria";
 import ProjetoDetalhes from "./pages/ProjetoDetalhes";
 import BlogDetalhes from "./pages/BlogDetalhes";
 import "./App.css";
+import BlueGradientBackground from "./components/BlueGradientBackground";
+
+// function App() {
+//   return (
+//     <BlueGradientBackground>
+//       <h1 className="text-white text-4xl font-bold text-center pt-20">
+//         Bem-vindo ao site Kutchindja
+//       </h1>
+//       {/* ...outros componentes aqui */}
+//     </BlueGradientBackground>
+//   );
+// }
+
 
 function App() {
   return (
-    <Routes>
+    <Routes className="bg-black min-h-screen">
       <Route path="/" element={<Home />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/projetos" element={<Projetos />} />

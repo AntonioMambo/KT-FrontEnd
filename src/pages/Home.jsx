@@ -10,7 +10,7 @@ import { statsData } from "../data/statsData";
 
 function Home() {
   return (
-    <>
+    < >
       <Navbar />
       <ProjectSlider /> 
       <div className="max-w-7xl mx-auto pt-10 px-6">
