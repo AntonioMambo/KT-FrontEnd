@@ -1,4 +1,4 @@
-import SarauBlog from "../assets/Blog/SarauBlog.jpg";
+// import SarauBlog from "../assets/Blog/SarauBlog.jpg";
 import { motion } from "framer-motion";
 import { ArrowLeftCircle } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -36,17 +36,17 @@ export default function BlogDetalhes() {
         className="text-3xl md:text-5xl font-bold mb-6 text-center text-red-600"
       >
         {blog.title}
-        <span className="text-blue-800"> - {blog.source}</span>
+        {/* <span className="text-blue-800"> - {blog.source}</span> */}
       </motion.h1>
 
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6 }}
         className="text-lg md:text-xl text-center mb-10 text-gray-600"
       >
-        Papel da Mídia na Visibilização de Negócios Inclusivos
-      </motion.h2>
+        {blog.title}
+      </motion.h2> */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -54,7 +54,7 @@ export default function BlogDetalhes() {
         className="mb-10"
       >
         <img
-          src={SarauBlog}
+          src={blog.image}
           alt="Workshop e Sarau Cultural"
           className="w-full max-h-[500px] object-cover rounded-2xl shadow-md"
         />
@@ -85,12 +85,3 @@ export default function BlogDetalhes() {
   );
 }
 
-const textos = [
-  "A Kutchindja, uma Associação de Jovens para Diversidade e Inclusão, realizou recentemente, na cidade de Maputo, um workshop e sarau cultural para promover uma reflexão sobre a importância da Mídia na promoção de negócios inclusivos e na defesa dos direitos desta comunidade.",
-  "Com o tema ‘Direitos Socioeconómicos LGBTQIA+ e o Papel da Mídia na Visibilização de Negócios Inclusivos’, o evento contou com a participação de influenciadores digitais, empreendedores LGBTQIA+ e representantes da Mídia.",
-  "Durante o workshop foram levantados os desafios enfrentados por empreendedores da comunidade LGBTQIA+ no uso de plataformas digitais para promover seus negócios, reconhecendo que, embora as ferramentas online ofereçam grande potencial de visibilidade, também impõem barreiras significativas.",
-  "A utilização de estratégias eficazes para aumentar a presença digital desses empreendimentos foi um dos principais temas discutidos, com foco em como os influenciadores digitais podem contribuir para dar voz a esses negócios.",
-  "Entre os objetivos do evento estavam a discussão das condições mediáticas e dos direitos que garantem uma vida digna e igualitária para as pessoas LGBTQIA+, além de identificar e partilhar boas práticas para a promoção de negócios inclusivos.",
-  "Os participantes também tiveram a oportunidade de estabelecer novas conexões e parcerias, com representantes da Mídia e empreendedores trocando experiências e ideias sobre como melhorar a visibilidade dos seus negócios e empreendimentos.",
-  "Com os resultados esperados de aumentar a compreensão sobre os direitos socioeconómicos das pessoas LGBTQIA+ e criar estratégias concretas para promover negócios inclusivos, o evento foi uma importante etapa na busca por um ambiente mais inclusivo, onde empreendedores LGBTQIA+ possam prosperar sem enfrentar discriminação.",
-];

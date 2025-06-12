@@ -68,12 +68,20 @@ const BlogCard = () => {
                 className="w-full h-40 object-cover"
               />
               <div className="p-4 flex flex-col justify-between h-full">
-                <span className="text-xs text-gray-500 mb-1">
+                {/* <span className="text-xs text-gray-500 mb-1">
                   {item.source}
-                </span>
+                </span> */}
                 <h3 className="text-base font-semibold mb-3">{item.title}</h3>
                 <div className="flex space-x-4 text-sm text-gray-600">
                   <span>❤️ {item.likes}</span>
+                </div>
+                <div className="mt-4 text-center">
+                  <Link
+                    to={`/Blog/${item.id}`}
+                    className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
+                  >
+                    Saber mais
+                  </Link>
                 </div>
               </div>
             </div>

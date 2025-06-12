@@ -100,7 +100,7 @@ function TeamSlider() {
       </Swiper>
 
       {/* Botões personalizados */}
-      <button
+      {/* <button
         className="custom-prev absolute top-1/2 left-2 transform -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100"
         onClick={handlePrev}
       >
@@ -111,7 +111,7 @@ function TeamSlider() {
         onClick={handleNext}
       >
         <FaChevronRight className="text-black" />
-      </button>
+      </button> */}
     </div>
   );
 }
