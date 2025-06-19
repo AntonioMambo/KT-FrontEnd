@@ -10,17 +10,17 @@ import { statsData } from "../data/statsData";
 
 function Home() {
   return (
-    < >
+    < div className="bg-gradient-to-r from-blue-80 via-blue-120 to-blue-200">
       <Navbar />
       <ProjectSlider /> 
-      <div className="max-w-7xl mx-auto pt-10 px-6">
+      <div className=" max-w-7xl mx-auto pt-10 px-6">
         <HeroSection />
         <TestimonialSlider />
         <TeamSlider />
-        <ImpactStats title="Nosso Impacto em Números" stats={statsData} />
+        <ImpactStats title="Nosso Impacto em Números" className="bg-white/20 backdrop-blur-lg " stats={statsData} />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

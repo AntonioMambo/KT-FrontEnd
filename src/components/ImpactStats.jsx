@@ -10,14 +10,14 @@ export const ImpactStats = ({ title, stats, className = '' }) => {
   });
 
   return (
-    <section className={`shadow-lg font-medium mt-4 px-4 sm:px-6 lg:px-8 ${className}`}>
+    <section className={`shadow-lg font-medium mt-4 px-4 sm:px-6 lg:px-8 bg-white/20 backdrop-blur-lg  ${className}`}>
       <div className="w-full mx-auto">
         <motion.h2
           ref={ref}
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 2.5 }}
-          className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 bg-white rounded-xl  overflow-hidden transition transform hover:scale-105"
+          className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 rounded-xl  overflow-hidden transition transform hover:scale-105"
         >
           {title}
         </motion.h2>

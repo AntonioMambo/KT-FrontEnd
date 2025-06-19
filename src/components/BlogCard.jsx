@@ -14,7 +14,7 @@ const BlogCard = () => {
     }));
   };
   return (
-    <div className="p-4 max-w-7xl mx-auto">
+    <div className="p-4 max-w-7xl mx-auto bg-white/20 backdrop-blur-lg ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
         {BlogData.map((item) =>
           item.isMain ? (
@@ -60,7 +60,7 @@ const BlogCard = () => {
           ) : (
             <div
               key={item.id}
-              className="bg-white rounded-xl shadow overflow-hidden flex flex-col"
+              className="rounded-xl shadow overflow-hidden flex flex-col"
             >
               <img
                 src={item.image}

@@ -28,7 +28,7 @@ export default function BlogDetalhes() {
     );
   }
   return (
-    <div className="bg-white min-h-screen px-4 md:px-12 py-20 text-gray-800 lg:py-10">
+    <div className="bg-gradient-to-r from-blue-80 via-blue-120 to-blue-200 min-h-screen px-4 md:px-12 py-20 text-gray-800 lg:py-10">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -40,9 +40,9 @@ const iconVariants = (duration) => ({
 
 function AboutUsCard() {
   return (
-    <div className="flex flex-col">
+    <div className="bg-white/20 backdrop-blur-lg rounded-2xl shadow-xl p-6 md:p-10 mb-10 flex flex-col">
       {/* Seção de História */}
-      <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-16">
+      <section className="w-full  py-12 px-4 sm:px-6 lg:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
           {/* Texto */}
           <div className="w-full md:w-1/2 text-center md:text-left">
@@ -88,7 +88,7 @@ function AboutUsCard() {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1.5 }}
-        className="w-full bg-gray-50 py-12 px-4 sm:px-6 lg:px-16"
+        className="w-full py-12 px-4 sm:px-6 lg:px-16"
       >
         <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Missão */}
@@ -96,7 +96,7 @@ function AboutUsCard() {
             initial="initial"
             animate="animate"
             variants={iconVariants(2.5)}
-            className="flex flex-col items-center text-center bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-transform hover:scale-105"
+            className="flex flex-col items-center text-center  rounded-xl p-6 shadow-md hover:shadow-lg transition-transform hover:scale-105"
           >
             <BiTargetLock className="text-4xl text-blue-500 mb-4" />
             <h3 className="text-xl md:text-2xl font-semibold text-blue-950 mb-2">
@@ -113,7 +113,7 @@ function AboutUsCard() {
             initial="initial"
             animate="animate"
             variants={iconVariants(3)}
-            className="flex flex-col items-center text-center bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-transform hover:scale-105"
+            className="flex flex-col items-center text-center rounded-xl p-6 shadow-md hover:shadow-lg transition-transform hover:scale-105"
           >
             <FaEye className="text-4xl text-blue-500 mb-4" />
             <h3 className="text-xl md:text-2xl font-semibold text-blue-950 mb-2">
@@ -130,7 +130,7 @@ function AboutUsCard() {
             initial="initial"
             animate="animate"
             variants={iconVariants(5)}
-            className="flex flex-col items-center text-center bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-transform hover:scale-105"
+            className="flex flex-col items-center text-center rounded-xl p-6 shadow-md hover:shadow-lg transition-transform hover:scale-105"
           >
             <FaHandshake className="text-4xl text-blue-500 mb-4" />
             <h3 className="text-xl md:text-2xl font-semibold text-blue-950 mb-2">

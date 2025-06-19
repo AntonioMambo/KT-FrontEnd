@@ -21,17 +21,17 @@ const testimonialData = [
     plataforma: "YouTube",
     url: "https://youtu.be/WavnkJoEAYA?si=8RumOp-Rlb10acEW",
   },
-  {
-    id: 3,
-    videoId: "30gEiweaAVQ",
-    titulo: "How Not To Die",
-    autor: "Michael Greger",
-    descricao:
-      "In this presentation, Dr. Greger explains what we can do about the #1 cause of death and disability: our diet.",
-    duracao: "1h 22m 14s",
-    plataforma: "YouTube",
-    url: "https://youtu.be/aJlFaq_nqMM",
-  },
+  // {
+  //   id: 3,
+  //   videoId: "30gEiweaAVQ",
+  //   titulo: "How Not To Die",
+  //   autor: "Michael Greger",
+  //   descricao:
+  //     "In this presentation, Dr. Greger explains what we can do about the #1 cause of death and disability: our diet.",
+  //   duracao: "1h 22m 14s",
+  //   plataforma: "YouTube",
+  //   url: "https://youtu.be/aJlFaq_nqMM",
+  // },
 ];
 
 export default testimonialData;

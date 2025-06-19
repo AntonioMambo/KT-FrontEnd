@@ -24,7 +24,7 @@ import BlueGradientBackground from "./components/BlueGradientBackground";
 
 function App() {
   return (
-    <Routes className="bg-black min-h-screen">
+    <Routes className="bg-gradient-to-r from-blue-100 via-blue-400 to-blue-200">
       <Route path="/" element={<Home />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/projetos" element={<Projetos />} />

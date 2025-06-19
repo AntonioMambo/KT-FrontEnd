@@ -28,7 +28,7 @@ export const containerVariants = {
 const ProjectsComponent = () => {
   return (
     <motion.div
-      className="w-full min-h-screen px-4 sm:px-6 lg:px-8 py-8 bg-white"
+      className="w-full min-h-screen px-4 sm:px-6 lg:px-8 py-8 bg-white/20 backdrop-blur-lg "
       initial="hidden"
       animate="show"
       variants={containerVariants}

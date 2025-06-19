@@ -31,7 +31,7 @@ function TeamSlider() {
   };
 
   return (
-    <div className="mt-10 tracking-wide relative">
+    <div className="mt-10 tracking-wide relative bg-white/20 backdrop-blur-lg">
       <div className="text-center mb-10">
         <motion.h2
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ function TeamSlider() {
       >
         {teamData.map((member, index) => (
           <SwiperSlide key={index} className="px-4 py-10">
-            <div className="bg-white rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col items-center p-6">
+            <div className="bg-white/20 backdrop-blur-lg  rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col items-center p-6">
               <img
                 src={member.imagem}
                 alt={member.nome}

@@ -11,7 +11,7 @@ function HeroSection() {
   return (
     <>
       {/* <img src={img1} alt="" className="h-64 w-full object-cover"  /> */}
-      <div className="flex flex-col items-center mt-3.5 lg:mt-1">
+      <div className="flex flex-col items-center mt-3.5 lg:mt-1 bg-white/20 backdrop-blur-lg ">
         <motion.h1
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}

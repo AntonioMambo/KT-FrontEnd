@@ -25,7 +25,7 @@ const ProjectCard = ({ projeto, index }) => {
 
   return (
     <motion.div
-      className="rounded-xl overflow-hidden shadow-xl bg-white hover:shadow-2xl transition duration-300 relative"
+      className="rounded-xl overflow-hidden shadow-xl bg-white/20 backdrop-blur-lg  hover:shadow-2xl transition duration-300 relative"
       variants={fadeInUp}
       initial="hidden"
       animate="show"
@@ -69,7 +69,7 @@ const ProjectCard = ({ projeto, index }) => {
             className={`p-2 rounded-full shadow-md transition duration-200 ${
               likes[index]
                 ? "bg-gradient-to-r from-orange-400 to-green-400 text-white"
-                : "bg-white text-gray-500 hover:text-red-400"
+                : "text-gray-500 hover:text-red-400"
             }`}
           >
             {likes[index] ? (

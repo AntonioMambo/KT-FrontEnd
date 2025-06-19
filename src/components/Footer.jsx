@@ -10,7 +10,7 @@ import { FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className=" bg-gray-100 border-t border-neutral-300  py-5 mt-6">
+    <footer className="bg-white/20 backdrop-blur-lg border-t border-neutral-300  py-5 mt-6">
       <div className="container mx-auto px-4 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {/* Sobre Nós */}
         <motion.div

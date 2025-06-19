@@ -37,7 +37,7 @@ function TestimonialSlider() {
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          1024: { slidesPerView: 2 },
         }}
         className="relative"
       >
@@ -45,7 +45,7 @@ function TestimonialSlider() {
           <SwiperSlide key={item.id}>
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="bg-white rounded-2xl shadow-md overflow-hidden transition-all flex flex-col h-full"
+              className="bg-white/20 backdrop-blur-lg  rounded-2xl shadow-md overflow-hidden transition-all flex flex-col h-full"
             >
               {/* Container de vídeo com thumbnail personalizada */}
               <div className="relative w-full aspect-video">

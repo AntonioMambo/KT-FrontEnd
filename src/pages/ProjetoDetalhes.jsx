@@ -48,7 +48,7 @@ const Detalhes = () => {
 
   return (
     <motion.div
-      className="w-full min-h-screen"
+      className="bg-gradient-to-r from-blue-80 via-blue-120 to-blue-200 w-full min-h-screen"
       initial="hidden"
       animate="show"
       variants={fadeInUp}
@@ -70,7 +70,7 @@ const Detalhes = () => {
       </div>
 
       <motion.div
-        className="w-full bg-white rounded-t-3xl -mt-10 shadow-xl z-20 relative"
+        className="w-full rounded-t-3xl -mt-10 shadow-xl z-20 relative"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -136,7 +136,7 @@ const Detalhes = () => {
               className={`absolute bottom-2 right-2 p-2 rounded-full shadow-lg transition ${
                 likes[idx]
                   ? "bg-gradient-to-r from-orange-400 to-green-400 text-white"
-                  : "bg-white text-gray-500"
+                  : "text-gray-500"
               }`}
             >
               {likes[idx] ? (

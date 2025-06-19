@@ -26,7 +26,7 @@ const imagens =
 
 function BannerSlider() {
   return (
-    <div className="w-full h-[300px] sm:h-[200px] md:h-[400px] lg:h-[550px] overflow-hidden relative">
+    <div className="w-full h-[300px] sm:h-[200px] md:h-[400px] lg:h-[550px] overflow-hidden relative bg-white/20 backdrop-blur-lg">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"

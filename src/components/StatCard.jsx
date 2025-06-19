@@ -60,7 +60,7 @@ export const StatCard = ({ value, label, description, index }) => {
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
-      className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-primary-400 transition-all duration-300 hover:shadow-lg hover:shadow-blue-300 group"
+      className="flex flex-col items-center p-6 bg-white/20 backdrop-blur-lg  backdrop-blur-sm rounded-xl border border-white/20 hover:border-primary-400 transition-all duration-300 hover:shadow-lg hover:shadow-blue-300 group"
     >
       <motion.div
         whileHover={{ scale: 1.05 }}

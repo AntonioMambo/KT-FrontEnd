@@ -47,7 +47,7 @@ function Gallery() {
       : imagens.filter((img) => img.categoria === categoriaSelecionada);
 
   return (
-    <section className="px-2 py-6 ">
+    <section className="px-2 py-6 bg-white/20 backdrop-blur-lg ">
       <h2 className="text-2xl font-bold mb-6 text-center text-blue-900">
         Galeria da Kutchindja
       </h2>
@@ -91,7 +91,7 @@ function Gallery() {
               className={`absolute bottom-2 right-2 p-2 rounded-full shadow-md transition-all ${
                 likes[img.id]
                   ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white"
-                  : "bg-white text-gray-500 hover:text-red-400"
+                  : "bg-white/20 backdrop-blur-lg text-gray-500 hover:text-red-400"
               }`}
             >
               {likes[img.id] ? (

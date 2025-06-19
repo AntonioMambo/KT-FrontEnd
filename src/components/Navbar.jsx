@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "/Logo.jpg"; 
+import logo from "/Logo.jpg";
 import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa";
@@ -14,7 +14,7 @@ export default function Navbar() {
   const toggleNavbar = () => setMobileDrawerOpen(!mobileDrawerOpen);
 
   return (
-    <nav className="bg-white shadow-md z-50 py-3 fixed top-0 w-full lg:sticky lg:top-0">
+    <nav className="shadow-md z-50 py-3 fixed top-0 w-full lg:sticky lg:top-0">
       <div className="container px-4 mx-auto relative text-sm">
         <div className="flex items-center justify-between">
           {/* LOGO */}
@@ -70,7 +70,7 @@ export default function Navbar() {
 
       {/* MENU SLIDE BAR MOBILE */}
       <div
-        className={`fixed top-0 left-0 h-full  w-full max-w-xs bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`bg-white/20 backdrop-blur-lg fixed top-0 left-0 h-full  w-full max-w-xs bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${
           mobileDrawerOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
