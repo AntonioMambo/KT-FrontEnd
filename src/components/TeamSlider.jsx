@@ -31,7 +31,7 @@ function TeamSlider() {
   };
 
   return (
-    <div className="mt-10 tracking-wide relative bg-white/20 backdrop-blur-lg">
+    <div className="mt-10 tracking-wide relative">
       <div className="text-center mb-10">
         <motion.h2
           whileInView={{ opacity: 1, y: 0 }}

@@ -17,7 +17,7 @@ function Home() {
         <HeroSection />
         <TestimonialSlider />
         <TeamSlider />
-        <ImpactStats title="Nosso Impacto em Números" className="bg-white/20 backdrop-blur-lg " stats={statsData} />
+        <ImpactStats title="Nosso Impacto em Números" stats={statsData} />
       </div>
       <Footer />
     </div>

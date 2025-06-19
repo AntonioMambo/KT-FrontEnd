@@ -40,7 +40,7 @@ const iconVariants = (duration) => ({
 
 function AboutUsCard() {
   return (
-    <div className="bg-white/20 backdrop-blur-lg rounded-2xl shadow-xl p-6 md:p-10 mb-10 flex flex-col">
+    <div className="rounded-2xl shadow-xl p-6 md:p-10 mb-10 flex flex-col">
       {/* Seção de História */}
       <section className="w-full  py-12 px-4 sm:px-6 lg:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
