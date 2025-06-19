@@ -137,7 +137,7 @@ function HeroSection() {
                 href=""
                 className="justify-center items-center  py-3 px-4 rounded-nd border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white"
               >
-                Particisas de ajuda ?
+                Precisa de ajuda ?
               </a>
             </div>
           </div>
