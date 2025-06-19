@@ -40,7 +40,7 @@ const ProjectsComponent = () => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1 }}
       >
-        Projetos Realizados 
+        Projetos Realizados   
       </motion.h1>
 
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">

@@ -11,7 +11,7 @@ function Gallery() {
 
   // Carrega imagens automaticamente
   const imagens = Object.entries(
-    import.meta.glob("../assets/AllP/*.{png,jpg,jpeg,svg,gif}", {
+    import.meta.glob("../assets/AllP/*.{png,jpg,JPG,jpeg,svg,gif}", {
       eager: true,
       as: "url",
     })

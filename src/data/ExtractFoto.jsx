@@ -1,17 +1,14 @@
-// src/assets/gallery.js
-export const handsoffFotos = Object.values(
+
+  
+export const ConhecerFotos = Object.values(
     import.meta.glob(
-      '../assets/images/projetos/Handsoff/*.{png,jpg,jpeg,svg,gif}',
-      { eager: true, as: 'url' }
+      '../assets/Conhecer e poder/*.{png,jpg,jpeg,svg,gif}',   { eager: true, as: 'url' }
     )
   );
 
-  
-export const empreenderFotos = Object.values(
-    import.meta.glob(
-      '../assets/images/projetos/Empreender/*.{png,jpg,jpeg,svg,gif}',
-      { eager: true, as: 'url' }
-    )
+  export const HandsoffFotos = Object.values(
+    import.meta.glob("../assets/Handsoff/*.{png,jpg,jpeg,svg,gif}", {
+      eager: true,
+      as: "url",
+    })
   );
-
-  
