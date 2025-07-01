@@ -82,11 +82,11 @@ function Footer() {
               <BsTelephone size={20} />
               <span>+258 861123869</span>
             </li>
-            <li className="">
+            <li className="flex items-center gap-3">
               <TiLocationOutline size={20} />
               <span>Avenida Kwame Nkruma N° 1519</span>
             </li>
-          </ul>flex items-center gap-3
+          </ul>
         </motion.div>
         {/* Redes Sociais*/}
         <motion.div

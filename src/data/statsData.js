@@ -17,7 +17,7 @@ export const statsData = [
     {
       value: "5+ ",
       label: "Financiadores",
-      description: "HIVOS, PNUD, Pathfinder, PSI, Ready Academy",
+      description: "HIVOS, PNUD, Pathfinder, PSI, Ready Academy, Fundação Ariel Glaiser, Pathfinder",
     },
     {
       value: "4",
