@@ -131,21 +131,21 @@ const projetos = [
     Estado: "Inativo",
     patrocinadores: ["Ministerio do Trabalho", "Plan International"],
   },
-  {
-    id: 8,
-    nome: "Handsoff 2",
-    banner: img5,
-    objetivo:
-      "Capacitar e empoderar os jovens gays e bissexuais para  advogarem pelos direitos sexuais e influenciarem o ambiente legal e político",
-    descricao:
-      "Implementado pela Kutchindja (2024-2025), com financiamento da Pathfinder Internacional e parceria da Plataforma Nacional dos Direitos dos Trabalhadores do Sexo, o projeto focou-se na redução da violência de género e violações de direitos humanos contra trabalhadores do sexo, especialmente homens gays, bissexuais e queer. Através de workshops de advocacia com instituições governamentais e líderes comunitários, promoveu estratégias para combater estigma e discriminação, abordando temas como SOGIE, direitos humanos e acesso à justiça. Uma campanha digital (#Kutchindja) amplificou mensagens contra a discriminação, enquanto um grupo de monitoria acompanhou casos de violência, encaminhando 4 situações para resolução legal. Treinamentos em APSS (Apoio Psicossocial) fortaleceram a capacidade de apoio a sobreviventes de violência, reforçando a proteção e inclusão social desses grupos.",
-    fotos: [
-      "https://img.freepik.com/free-psd/pride-month-celebration-template_23-2151435428.jpg?uid=R78469827&ga=GA1.1.1129599235.1741291614&semt=ais_hybrid&w=740",
-      "https://img.freepik.com/free-photo/people-enjoying-celebrations-pride-month_23-2151264166.jpg?uid=R78469827&ga=GA1.1.1129599235.1741291614&semt=ais_hybrid&w=740",
-      "https://img.freepik.com/free-photo/young-people-celebrating-pride-month_23-2149333033.jpg?uid=R78469827&ga=GA1.1.1129599235.1741291614&semt=ais_hybrid&w=740",
-    ],
-    Estado: "Inativo",
-    patrocinadores: ["Ministerio do Trabalho", "Plan International"],
-  },
+  // {
+  //   id: 8,
+  //   nome: "Handsoff 2",
+  //   banner: img5,
+  //   objetivo:
+  //     "Capacitar e empoderar os jovens gays e bissexuais para  advogarem pelos direitos sexuais e influenciarem o ambiente legal e político",
+  //   descricao:
+  //     "Implementado pela Kutchindja (2024-2025), com financiamento da Pathfinder Internacional e parceria da Plataforma Nacional dos Direitos dos Trabalhadores do Sexo, o projeto focou-se na redução da violência de género e violações de direitos humanos contra trabalhadores do sexo, especialmente homens gays, bissexuais e queer. Através de workshops de advocacia com instituições governamentais e líderes comunitários, promoveu estratégias para combater estigma e discriminação, abordando temas como SOGIE, direitos humanos e acesso à justiça. Uma campanha digital (#Kutchindja) amplificou mensagens contra a discriminação, enquanto um grupo de monitoria acompanhou casos de violência, encaminhando 4 situações para resolução legal. Treinamentos em APSS (Apoio Psicossocial) fortaleceram a capacidade de apoio a sobreviventes de violência, reforçando a proteção e inclusão social desses grupos.",
+  //   fotos: [
+  //     "https://img.freepik.com/free-psd/pride-month-celebration-template_23-2151435428.jpg?uid=R78469827&ga=GA1.1.1129599235.1741291614&semt=ais_hybrid&w=740",
+  //     "https://img.freepik.com/free-photo/people-enjoying-celebrations-pride-month_23-2151264166.jpg?uid=R78469827&ga=GA1.1.1129599235.1741291614&semt=ais_hybrid&w=740",
+  //     "https://img.freepik.com/free-photo/young-people-celebrating-pride-month_23-2149333033.jpg?uid=R78469827&ga=GA1.1.1129599235.1741291614&semt=ais_hybrid&w=740",
+  //   ],
+  //   Estado: "Inativo",
+  //   patrocinadores: ["Ministerio do Trabalho", "Plan International"],
+  // },
 ];
 export default projetos;

@@ -24,7 +24,7 @@ function Footer() {
             diversidade e inclusão,que busca, por meio de suas ações, promover o
             empoderamento de jovens excluídos e marginalizados para que estes
             possam se engajar activamente na luta por uma sociedade
-            justa,igualitária e que respeite as diferenças. 
+            justa,igualitária e que respeite as diferenças.
           </p>
         </motion.div>
 
@@ -82,11 +82,11 @@ function Footer() {
               <BsTelephone size={20} />
               <span>+258 861123869</span>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="">
               <TiLocationOutline size={20} />
               <span>Avenida Kwame Nkruma N° 1519</span>
             </li>
-          </ul>
+          </ul>flex items-center gap-3
         </motion.div>
         {/* Redes Sociais*/}
         <motion.div
@@ -101,21 +101,24 @@ function Footer() {
           <div className="flex flex-col justify-center ">
             <a
               href="https://www.facebook.com/share/18q9snswNo/?mibextid=wwXIfr"
-              className="text-blue-500 my-1  hover:text-blue-700"
+              className="flex items-center gap-3 text-blue-500 my-1  hover:text-blue-700"
             >
               <FaFacebookF size={24} />
+              <span className="text-blue-950"> Kutchindja</span>
             </a>
             <a
               href="https://www.instagram.com/kutchindja_official?igsh=MTNoNmJndHV1aXIwYw=="
-              className="text-red-300 my-1  hover:text-blue-700"
+              className="flex items-center gap-3 text-red-300 my-1  hover:text-blue-700"
             >
-              <IoLogoInstagram size={24} />
+              <IoLogoInstagram size={24} />{" "}
+              <span className="text-blue-950"> Kutchindja_offical </span>
             </a>
             <a
               href="https://youtube.com/@associacaokutchindja?si=xbTMjKL5hoD9w4ik"
-              className="text-red-500 my-1 hover:text-blue-700"
+              className="flex items-center gap-3 text-red-500 my-1 hover:text-blue-700"
             >
               <FaYoutube size={24} />
+               <span className="text-blue-950">  Associação Kutchindja</span>
             </a>
             {/* <a href="#" className="text-blue-500 hover:text-blue-700">
               <FaTwitter/>
