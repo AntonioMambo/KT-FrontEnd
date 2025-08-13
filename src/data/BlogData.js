@@ -7,6 +7,7 @@ const BlogData = [
     id: 1,
     title: "Encontros de Auscultação Comunitária - Empreendedorismo LGBTQIA+ em Manhiça e Maputo",
     image: b1,
+    type:"image",
     source: "Kutchindja",
     Textos: [
       "No âmbito do projeto \"PINK MONEY\", financiado pela Hivos por meio do programa Free to Be Me, a KUTCHINDJA promoveu encontros de auscultações comunitárias no distrito de Manhiça e na Cidade de Maputo.",
@@ -28,6 +29,7 @@ const BlogData = [
     id: 2,
     title: "Momentos de conexão",
     image: b2,
+    type:"image",
     source: "Kutchindja",
     Textos: [
       "No âmbito da implementação do projeto \"PINK MONEY\", financiado pela Hivos através do programa Free to Be Me, cujo objetivo é apoiar indivíduos, grupos e organizações LGBTQIA+ na construção e manutenção de movimentos vibrantes e confiantes, capacitando-os a advogar e defender seus direitos humanos, sociais e económicos.",
@@ -37,11 +39,13 @@ const BlogData = [
     ],
     likes: 91,
     comments: 0,
+    // isSummary: true,
   },
   {
     id: 3,
     title: "Sarau Cultural e Workshop sobre Direitos Socioeconómicos LGBTQIA+",
     image: b3,
+    type:"image",
     source: "Kutchindja",
     Textos: [
       "A Kutchindja, uma Associação de Jovens para Diversidade e Inclusão, realizou recentemente, na cidade de Maputo, um workshop e sarau cultural para promover uma reflexão sobre a importância da Mídia na promoção de negócios inclusivos e na defesa dos direitos desta comunidade.",
@@ -55,6 +59,22 @@ const BlogData = [
     imageAlt: "Momentos de Conexão - Evento de Empreendedorismo Inclusivo",
     likes: 89,
     // isMain: true,
+  },
+  {
+    id: 4,
+    title: "Diário do empreendedor- Pink Money",
+    url: "https://youtube.com/shorts/7Akhw4Nh3t8?feature=share",
+    type:"video",
+    source: "Kutchindja",
+    Textos: [
+    "A Kutchindja teve a honra de ser destacada na 10ª edição do Boletim Informativo da Unidade Técnica de Suporte (UTS) para as Populações-Chave! Esta edição do boletim reflete os avanços e desafios da resposta ao HIV em Moçambique, e dedica um espaço especial à atuação da Kutchindja como promotora do empoderamento socioeconómico de jovens LGBTQIA+",
+    " Através do projeto Pink Money, uma iniciativa concebida para impulsionar o empoderamento económico de pessoas LGBTQIA+ em Moçambique, buscamos contribuir para a construção de um ambiente inclusivo, justo e equitativo, onde cada indivíduo tenha oportunidades reais de prosperar e de participar ativamente no desenvolvimento socioeconómico do país. O boletim também dá ênfase à inspiradora trajetória de Jukah Macaringue, activista social, membro fundador e atual coordenador da Associação Kutchindja, cuja dedicação é reflexo de uma luta coletiva por dignidade e justiça.",
+    "Ser reconhecida em um espaço tão estratégico é mais do que uma menção: é o reconhecimento de um compromisso genuíno com a justiça social, a inclusão e a transformação real. Seguimos juntos, construindo caminhos possíveis para uma sociedade mais digna e equitativa para todas as pessoas."
+    
+    ],
+    imageAlt: "Diário do empreendedor- Pink Money",
+    likes: 7,
+    isMain: true,
   }
   // ,
   //   {

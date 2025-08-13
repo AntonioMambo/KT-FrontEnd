@@ -7,7 +7,7 @@ export const statsData = [
     {
       value: "6+",
       label: "Projetos Implementados ",
-      description: "+Por Nós, Visão Jovem+, Empreender com Orgulho, Handsoff 2, Geração Solução, Pink Money",
+      description: "+Por Nós, Visão Jovem+, Empreender com Orgulho, Handsoff 2, Pink Money",
     },
     {
       value: "15+ ",

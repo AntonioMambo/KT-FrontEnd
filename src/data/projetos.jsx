@@ -94,7 +94,7 @@ const projetos = [
         as: "url",
       })
     ),
-    Estado: "Ativo",
+    Estado: "Inativo",
     patrocinadores: ["Ministerio do Trabalho", "Plan International"],
   },
   {

@@ -80,22 +80,6 @@ function TestimonialSlider() {
             </motion.div>
           </SwiperSlide>
         ))}
-
-        {/* Botões customizados */}
-        {/* <div className="flex justify-center gap-4 mt-8 md:mt-4 md:absolute md:top-1/2 md:-translate-y-1/2 md:flex-col md:right-0 md:mr-2 z-10">
-          <button
-            className="custom-prev bg-blue-800 hover:bg-blue-600 text-white p-3 rounded-full shadow-md transition"
-            aria-label="Anterior"
-          >
-            ◀
-          </button>
-          <button
-            className="custom-next bg-blue-800 hover:bg-blue-600 text-white p-3 rounded-full shadow-md transition"
-            aria-label="Próximo"
-          >
-            ▶
-          </button>
-        </div> */}
       </Swiper>
     </div>
   );
