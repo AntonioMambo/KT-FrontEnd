@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   assetsInclude: ['**/*.JPG'], // <- mantém a configuração para .JPG
-  
+
   build: {
     // Chunk splitting otimizado
     rollupOptions: {
@@ -18,7 +18,7 @@ export default defineConfig({
           'swiper-vendor': ['swiper'], // Swiper separado por ser muito pesado
           'icons-vendor': ['lucide-react', 'react-icons'],
           // Outros utilitários
-          'utils': ['react-helmet', 'react-intersection-observer', 'react-player']
+          'utils': ['react-intersection-observer', 'react-player']
         }
       }
     },
@@ -41,21 +41,20 @@ export default defineConfig({
     reportCompressedSize: false, // Acelera build
     chunkSizeWarningLimit: 1000 // Avisa sobre chunks grandes
   },
-  
+
   // Otimizações de desenvolvimento
   optimizeDeps: {
     include: [
-      'react', 
-      'react-dom', 
+      'react',
+      'react-dom',
       'react-router-dom',
       'framer-motion',
       'lucide-react',
       'react-icons',
-      'react-helmet',
       'react-player'
     ]
   },
-  
+
   // Cache de dependências
   server: {
     fs: {
