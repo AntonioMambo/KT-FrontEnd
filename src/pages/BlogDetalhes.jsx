@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactPlayer from "react-player";
@@ -405,4 +405,10 @@ const BlogDetalhes = () => {
   );
 };
 
-export default BlogDetalhes;
+const BlogDetalhesPage = () => (
+  <Suspense fallback={<div>Carregando...</div>}>
+    <BlogDetalhes />
+  </Suspense>
+);
+
+export default BlogDetalhesPage;
