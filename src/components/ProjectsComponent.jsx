@@ -60,7 +60,7 @@ const ProjectsComponent = () => {
   });
 
   return (
-    <div className="relative w-full bg-gradient-to-b from-slate-50 to-white py-16">
+    <div className="relative w-full py-16">
       {/* Barra de progresso fixa no topo */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 origin-left z-50"
