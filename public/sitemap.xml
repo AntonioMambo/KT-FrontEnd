@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.kutchindja.org.mz/</loc>
+    <lastmod>2025-07-29</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.kutchindja.org.mz/sobre</loc>
+    <lastmod>2025-07-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kutchindja.org.mz/blog</loc>
+    <lastmod>2025-07-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kutchindja.org.mz/projetos </loc>
+    <lastmod>2025-07-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kutchindja.org.mz/galeria</loc>
+    <lastmod>2025-07-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
