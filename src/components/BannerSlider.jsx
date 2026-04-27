@@ -43,8 +43,9 @@ function BannerSlider() {
               <img
                 src={image.url}
                 alt={image.alt}
-                className="w-full h-full object-cover brightness-30"
-                loading="lazy"
+                className="w-full h-full object-cover brightness-50"
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
               />
               <div className="absolute bottom-4 left-4 p-3 text-2xl sm:text-4xl md:text-6xl lg:text-9xl font-semibold text-gray-800 shadow-lg">
                 <Link

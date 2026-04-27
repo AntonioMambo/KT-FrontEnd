@@ -359,7 +359,7 @@ const BlogDetalhes = () => {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">❤️ {relatedBlog.likes}</span>
                       <Link
-                        to={`/Blog/${relatedBlog.id}`}
+                        to={`/blog/${relatedBlog.id}`}
                         className="text-purple-600 hover:text-purple-800 font-medium text-sm"
                       >
                         Ler mais →

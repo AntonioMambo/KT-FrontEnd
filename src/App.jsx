@@ -22,50 +22,9 @@ const PageLoader = memo(() => (
 ));
 
 function App() {
-
-  // Preload de fontes e imagens críticas para performance
-  useEffect(() => {
-    const fonts = ['/fonts/inter-var.woff2'];
-    const images = ['/images/logo.webp', '/images/hero-banner.webp'];
-
-    fonts.forEach(f => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'font';
-      link.href = f;
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-
-    images.forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = src;
-      document.head.appendChild(link);
-    });
-
-    return () => {
-      // Limpeza dos links adicionados
-      document.head.querySelectorAll('link[rel="preload"]').forEach(l => l.remove());
-    };
-  }, []);
-
-  // Web Vitals simples
-  useEffect(() => {
-    if ('performance' in window && process.env.NODE_ENV === 'production') {
-      performance.mark('app-start');
-      requestIdleCallback(() => {
-        performance.mark('app-end');
-        performance.measure('app-load', 'app-start', 'app-end');
-        const measure = performance.getEntriesByName('app-load')[0];
-        if (measure) console.log(`⚡ App carregado em ${measure.duration.toFixed(2)}ms`);
-      });
-    }
-  }, []);
-
   return (
     <div className="bg-gradient-to-r from-blue-100 via-blue-400 to-blue-200 min-h-screen antialiased">
+      <SpeedInsights />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />

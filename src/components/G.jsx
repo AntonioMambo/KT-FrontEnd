@@ -18,7 +18,8 @@ function G() {
   const imagens = Object.values(
     import.meta.glob("../assets/Handsoff/*.{png,jpg,jpeg,svg,gif}", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     })
   );
 

@@ -23,7 +23,7 @@ export default defineConfig({
       }
     },
     // Otimizações de build mais agressivas
-    target: 'esnext',
+    target: 'es2020',
     minify: 'terser',
     terserOptions: {
       compress: {

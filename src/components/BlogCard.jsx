@@ -35,9 +35,10 @@ const BlogCard = () => {
                 <div className="relative w-full h-full">
                   <ReactPlayer
                     url={item.url}
-                    playing
-                    muted={mutedVideos[item.id] ?? true}
+                    playing={false}
+                    muted
                     controls
+                    light={true}
                     width="100%"
                     height="100%"
                     className="absolute top-0 left-0"
@@ -66,7 +67,7 @@ const BlogCard = () => {
                 </div>
                 <div className="mt-4 text-center">
                   <Link
-                    to={`/Blog/${item.id}`}
+                    to={`/blog/${item.id}`}
                     className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
                   >
                     Saber mais
@@ -98,9 +99,10 @@ const BlogCard = () => {
                 <div className="relative w-full aspect-video">
                   <ReactPlayer
                     url={item.url}
-                    playing
-                    muted={mutedVideos[item.id] ?? true}
+                    playing={false}
+                    muted
                     controls
+                    light={true}
                     width="100%"
                     height="100%"
                     className="absolute top-0 left-0"
@@ -129,7 +131,7 @@ const BlogCard = () => {
                 </div>
                 <div className="mt-4 text-center">
                   <Link
-                    to={`/Blog/${item.id}`}
+                    to={`/blog/${item.id}`}
                     className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
                   >
                     Saber mais

@@ -1,4 +1,4 @@
-import React, { memo, lazy, Suspense, useEffect, useCallback, useMemo, useRef } from "react";
+import React, { memo, lazy, Suspense, useEffect, useMemo, useRef } from "react";
 import Navbar from "../components/Navbar";
 import ProjectSlider from "../components/ProjectSlider";
 import { useDocumentHead } from '../hooks/useDocumentTitle';
@@ -75,20 +75,6 @@ function Home() {
     return () => link.remove();
   }, []);
 
-  // Preload fonts e imagens críticas
-  useEffect(() => {
-    ['/fonts/inter-var.woff2'].forEach(f => {
-      const link = document.createElement('link');
-      link.rel = 'preload'; link.as = 'font'; link.href = f; link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-    ['/images/hero-banner.webp', '/images/logo.webp', '/images/project-1.webp'].forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'preload'; link.as = 'image'; link.href = src;
-      document.head.appendChild(link);
-    });
-  }, []);
-
   // Intersection Observer para lazy load apenas quando entra no viewport
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -109,25 +95,12 @@ function Home() {
     return () => observer.disconnect();
   }, []);
 
-  // Web Vitals simples
-  useEffect(() => {
-    if ('performance' in window && process.env.NODE_ENV === 'production') {
-      performance.mark('home-start');
-      requestIdleCallback(() => {
-        performance.mark('home-end');
-        performance.measure('home-load', 'home-start', 'home-end');
-        const measure = performance.getEntriesByName('home-load')[0];
-        if (measure) console.log(`⚡ Home carregada em ${measure.duration.toFixed(2)}ms`);
-      });
-    }
-  }, []);
-
   return (
-    <div ref={containerRef} className="bg-gradient-to-r from-blue-80 via-blue-120 to-blue-200 min-h-screen antialiased transform-gpu will-change-auto" style={{ transform: 'translateZ(0)', contain: 'layout style paint' }}>
-      <header className="sticky top-0 z-50 backdrop-blur-sm  shadow-sm"><Navbar /></header>
+    <div ref={containerRef} className="bg-gradient-to-r from-blue-100 via-blue-400 to-blue-200 min-h-screen antialiased">
+      <header className="sticky top-0 z-50 backdrop-blur-sm shadow-sm"><Navbar /></header>
 
       <main role="main" className="relative">
-        <section aria-label="Projetos em destaque" className="relative transform-gpu">
+        <section aria-label="Projetos em destaque" className="relative">
           <ProjectSlider />
         </section>
 

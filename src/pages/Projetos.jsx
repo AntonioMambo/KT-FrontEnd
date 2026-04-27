@@ -68,22 +68,12 @@ const Projetos = () => {
     return () => link.remove();
   }, []);
 
-  // Preload imagens críticas
-  useEffect(() => {
-    ['/images/banner.webp', '/images/project-1.webp'].forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = src;
-      document.head.appendChild(link);
-    });
-  }, []);
+
 
   return (
     <div
       ref={containerRef}
-      className="bg-gradient-to-r from-blue-80 via-blue-120 to-blue-200 min-h-screen antialiased transform-gpu will-change-auto"
-      style={{ transform: 'translateZ(0)', contain: 'layout style paint' }}
+      className="bg-gradient-to-r from-blue-100 via-blue-400 to-blue-200 min-h-screen antialiased"
     >
       <header className="sticky top-0 z-50 backdrop-blur-sm shadow-sm">
         <Navbar />

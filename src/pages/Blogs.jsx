@@ -59,19 +59,7 @@ function Blogs() {
     };
   }, []);
 
-  // Preload de recursos críticos
-  useEffect(() => {
-    ['/fonts/inter-var.woff2'].forEach(f => {
-      const link = document.createElement('link');
-      link.rel = 'preload'; link.as = 'font'; link.href = f; link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-    ['/images/logo.webp'].forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'preload'; link.as = 'image'; link.href = src;
-      document.head.appendChild(link);
-    });
-  }, []);
+
 
   // Intersection Observer para lazy load baseado em viewport
   const [loadBlog, setLoadBlog] = React.useState(false);
@@ -93,8 +81,7 @@ function Blogs() {
 
   return (
     <div
-      className="bg-gradient-to-r from-blue-80 via-blue-120 to-blue-200 min-h-screen antialiased transform-gpu will-change-auto"
-      style={{ transform: 'translateZ(0)', contain: 'layout style paint' }}
+      className="bg-gradient-to-r from-blue-100 via-blue-400 to-blue-200 min-h-screen antialiased"
     >
       <header className="sticky top-0 z-50 backdrop-blur-sm shadow-sm">
         <Navbar />

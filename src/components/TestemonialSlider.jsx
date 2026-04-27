@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, memo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -9,14 +9,17 @@ import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
 
 function TestimonialSlider() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   return (
     <div className="p-4 max-w-7xl mx-auto">
       {/* Título animado */}
       <div className="text-center mb-10">
         <motion.h2
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -100 }}
-          transition={{ duration: 1.2 }}
+          initial={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="text-3xl md:text-4xl font-semibold text-blue-950"
         >
           Assista{" "}
@@ -29,11 +32,9 @@ function TestimonialSlider() {
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}
-        navigation={{
-          nextEl: ".custom-next",
-          prevEl: ".custom-prev",
-        }}
+        navigation
         pagination={{ clickable: true }}
+        onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -41,23 +42,27 @@ function TestimonialSlider() {
         }}
         className="relative"
       >
-        {testimonialData.map((item) => (
+        {testimonialData.map((item, index) => (
           <SwiperSlide key={item.id}>
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="bg-white/20 backdrop-blur-lg  rounded-2xl shadow-md overflow-hidden transition-all flex flex-col h-full"
-            >
-              {/* Container de vídeo com thumbnail personalizada */}
-              <div className="relative w-full aspect-video">
-                <ReactPlayer
-                  url={item.url}
-                  controls
-                  muted
-                  playing
-                  width="100%"
-                  height="100%"
-                  className="absolute top-0 left-0"
-                />
+            <div className="bg-white/20 backdrop-blur-lg rounded-2xl shadow-md overflow-hidden transition-all flex flex-col h-full">
+              {/* Container de vídeo — só carrega quando visível */}
+              <div className="relative w-full aspect-video bg-gray-900">
+                {Math.abs(index - activeSlide) <= 1 ? (
+                  <ReactPlayer
+                    url={item.url}
+                    controls
+                    muted
+                    playing={false}
+                    light={true}
+                    width="100%"
+                    height="100%"
+                    className="absolute top-0 left-0"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-white text-4xl">
+                    ▶️
+                  </div>
+                )}
               </div>
 
               {/* Conteúdo do card */}
@@ -77,7 +82,7 @@ function TestimonialSlider() {
                   <span>⏳ {item.duracao}</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -85,4 +90,4 @@ function TestimonialSlider() {
   );
 }
 
-export default TestimonialSlider;
+export default memo(TestimonialSlider);

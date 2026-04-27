@@ -22,8 +22,9 @@ const projetos = [
     ],
     fotos: Object.values(
       import.meta.glob("../assets/PinkMoney/*.{png,jpg,JPG,jpeg,svg,gif}", {
-        eager: true,
-        as: "url",
+        eager: false,
+        query: "?url",
+        import: "default",
       })
     ),
     Estado: "Ativo",
@@ -42,8 +43,9 @@ const projetos = [
     ],
     fotos:Object.values(
       import.meta.glob("../assets/Por/*.{png,jpg,JPG,jpeg,svg,gif}", {
-        eager: true,
-        as: "url",
+        eager: false,
+        query: "?url",
+        import: "default",
       })
     ),
     Estado: "Ativo",
@@ -58,8 +60,9 @@ const projetos = [
     descricao: "Campanha de sensibilização e workshops comunitários.",
     fotos:Object.values(
       import.meta.glob("../assets/We/*.{png,jpg,JPG,jpeg,svg,gif}", {
-        eager: true,
-        as: "url",
+        eager: false,
+        query: "?url",
+        import: "default",
       })
     ) ,
     Estado: "Ativo",
@@ -74,8 +77,9 @@ const projetos = [
     descricao: "Campanha de sensibilização e workshops comunitários.",
     fotos: Object.values(
       import.meta.glob("../assets/Handsoff/*.{png,jpg,JPG,jpeg,svg,gif}", {
-        eager: true,
-        as: "url",
+        eager: false,
+        query: "?url",
+        import: "default",
       })
     ),
     Estado: "Inativo",
@@ -89,9 +93,10 @@ const projetos = [
       "Promover a inclusão e o empoderamento económico promover a inclusão e o empoderamento económico de jovens LGBTQIA+ em Moçambique ",
     descricao: "Campanha de sensibilização e workshops comunitários.",
     fotos: Object.values(
-      import.meta.glob("../assets/Empreender/*.{png,jpg,JPG, jpeg,svg,gif}", {
-        eager: true,
-        as: "url",
+      import.meta.glob("../assets/Empreender/*.{png,jpg,JPG,jpeg,svg,gif}", {
+        eager: false,
+        query: "?url",
+        import: "default",
       })
     ),
     Estado: "Inativo",
@@ -107,8 +112,9 @@ const projetos = [
       "O projecto Conhecer é Poder, realizado em 2023 pelo consórcio entre a Kutchindja e a TRANSformar, com apoio financeiro da Ready Academia, teve como objectivo empoderar jovens LGBTQIA+ entre 15 e 24 anos, utilizando a arte e a educação como ferramentas para conscientizar sobre diversidade, saúde sexual e direitos humanos. A iniciativa foi dividida em duas fases principais, combinando expressão artística e engajamento digital.",
     fotos: Object.values(
       import.meta.glob("../assets/Conhecer/*.{png,jpg,JPG,jpeg,svg,gif}", {
-        eager: true,
-        as: "url",
+        eager: false,
+        query: "?url",
+        import: "default",
       })
     ),
     Estado: "Inativo",
@@ -124,8 +130,9 @@ const projetos = [
       "O projecto Conhecer é Poder, realizado em 2023 pelo consórcio entre a Kutchindja e a TRANSformar, com apoio financeiro da Ready Academia, teve como objectivo empoderar jovens LGBTQIA+ entre 15 e 24 anos, utilizando a arte e a educação como ferramentas para conscientizar sobre diversidade, saúde sexual e direitos humanos. A iniciativa foi dividida em duas fases principais, combinando expressão artística e engajamento digital.",
     fotos: Object.values(
       import.meta.glob("../assets/Visao/*.{png,jpg,JPG,jpeg,svg,gif}", {
-        eager: true,
-        as: "url",
+        eager: false,
+        query: "?url",
+        import: "default",
       })
     ),
     Estado: "Inativo",

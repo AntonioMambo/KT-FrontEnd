@@ -15,8 +15,9 @@ function Footer() {
         {/* Sobre Nós */}
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 100 }}
-          transition={{ duration: 1.5 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
           <h4 className="text-lg font-bold text-blue-950 mb-3">Sobre Nós</h4>
           <p className="text-sm text-blue-950 leading-relaxed">
@@ -49,12 +50,12 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/Blog" className="hover:text-blue-500">
+              <Link to="/blog" className="hover:text-blue-500">
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="hover:text-blue-500">
+              <Link to="/projetos" className="hover:text-blue-500">
                 Projetos
               </Link>
             </li>

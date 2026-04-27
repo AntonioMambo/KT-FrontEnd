@@ -23,7 +23,7 @@ function Galeria() {
   });
 
   return (
-    <div className="bg-gradient-to-r from-blue-80 via-blue-120 to-blue-200 min-h-screen">
+    <div className="bg-gradient-to-r from-blue-100 via-blue-400 to-blue-200 min-h-screen">
       <Navbar />
 
       <Suspense fallback={
